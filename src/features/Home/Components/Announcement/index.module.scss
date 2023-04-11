@@ -1,0 +1,86 @@
+@import '../../../../styles/palette.scss';
+.getPreparedContainer {
+  background: $backgroundDarkColor;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-bottom: 150px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 40px;
+
+    & > div {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+  img {
+    margin-top: 25px;
+    margin-bottom: 45px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+  }
+  .title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 30px;
+      line-height: 35px;
+      font-weight: 250;
+      margin-bottom: 0;
+    }
+  }
+
+  .days {
+    font-family: 'Digital Numbers', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FE86A3;
+
+    text-shadow: 0 4px 10px $primaryPinkColor;
+  }
+  .time {
+    font-family: 'Digital Numbers', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 93px;
+    text-align: center;
+
+    color: $primaryGreenColor;
+    text-shadow: 0 4px 10px $primaryGreenColor;
+  }
+  .notifyMeButtonContainer {
+    display: flex;
+    justify-content: center;
+
+
+    .notifyMeButton {
+      background: $backgroundDarkColor;
+      border: 1px solid #FFFFFF;
+      font-weight: normal;
+      font-size: $primaryFontSizeDesktop;
+      line-height: 21px;
+      text-align: center;
+      color: #FFFFFF;
+
+      @media (max-width: $maxMobileWidth) {
+        min-width: 243px;
+        font-weight: 300;
+      }
+    }
+  }
+}

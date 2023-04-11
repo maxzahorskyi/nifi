@@ -1,0 +1,121 @@
+$maxMobileWidth: 1024px;
+$minDesktopWidth: 1001px;
+
+// COLORS
+
+$primaryPinkColor: #e4456c;
+$lightPinkColor: #d4617d;
+$primaryGreenColor: #52da3c;
+$lightGreenColor: #6bbf00;
+$primaryGreyColor: #343942;
+$lightGreyColor: #f5f5f7;
+$deepBlueColor: #0e1e3a;
+$lightBlueColor: #dee1e8;
+
+$normalTextColor: #4b4b4b;
+$textDarkColor: #000;
+$textHintColor: #a3a3a3;
+$textWhiteColor:  #ffffff;
+$backgroundDarkColor: #343942;
+$backgroundLightColor: #f5f5f7;
+$backgroundPinkColor: #d4617d;
+$voidAvatarColor: #f5f5f7;
+$mediumGreyColor: #e9e9e9;
+$warningColor: #FFF5D0;
+$anonymousColor: #EEEEEE;
+
+$tableLinesColor: #a3a3a3;
+
+$secondaryButtonBackgroundColor: #fff;
+$secondaryButtonLineColor: #000;
+$activeButtonTextColor: #fff;
+$collectionCardWrapper: #fff;
+
+$sectionDividerColor: #f5f5f7;
+
+// FONTS UNIVERSAL
+
+$primaryFontWeight: 300;
+$regularFontWeight: 400;
+$mediumFontWeight: 500;
+$labelFontWeight: 500;
+$hintFontWeight: 400;
+
+// UNIVERSAL SIZES
+
+$thinLineThickness: 1px;
+$normalLineThickness: 2.4px;
+
+$extraThinHorizontalMargin: 10px;
+
+// DESKTOP SIZES
+
+$headerHeightDesktop: 95px;
+
+$modalHeaderHeightDesktop: 75px;
+
+$buttonWidthDesktop: 245px;
+$createTokenButtonTopMarginDesktop: 75px;
+
+$largeAvatarSizeDesktop: 80px;
+$mediumAvatarSizeDesktop: 50px;
+$smallAvatarSizeDesktop: 32px;
+
+$imageSizeDesktop: 500px;
+
+// MOBILE SIZES
+
+$headerHeightMobile: 51px;
+$slidingHeaderHeightMobile: 42px;
+
+$modalHeaderHeightMobile: 55px;
+
+$largeAvatarSizeMobile: 80px;
+$enlargedAvatarSizeMobile: 50px;
+$mediumAvatarSizeMobile: 40px;
+$smallAvatarSizeMobile: 32px;
+
+// VERTICAL INTERVALS DESKTOP
+$createTokenButtonMargin: 75px;
+
+$extraLargeVerticalMarginDesktop: 150px;
+$largeVerticalMarginDesktop: 60px;
+$enlargedVerticalMarginDesktop: 40px;
+$standardVerticalMarginDesktop: 30px;
+$smallVerticalMarginDesktop: 24px;
+$thinVerticalMarginDesktop: 18px;
+$extraThinVerticalMarginDesktop: 10px;
+
+// VERTICAL INTERVALS MOBILE
+
+$largeVerticalMarginMobile: 40px;
+$standardVerticalMarginMobile: 30px;
+$smallVerticalMarginMobile: 24px;
+$thinVerticalMarginMobile: 18px;
+$extraThinVerticalMarginMobile: 10px;
+
+$standardPadding: 30px;
+
+// HORIZONTAL INTERVALS MOBILE
+
+$bodyHorizontalMarginMobile: 18px;
+$smallBodyHorizontalMarginMobile: 10px;
+
+// FONTS DESKTOP
+
+$primaryFontSizeDesktop: 18px;
+$secondaryFontSizeDesktop: 14px;
+$headerFontSizeDesktop: 36px;
+$modalHeaderFontSizeDesktop: 30px;
+$entriesFontSizeDesktop: 18px;
+$parametersFontSizeDesktop: 24px;
+
+$cardTitleFontSize: 24px;
+
+// FONTS MOBILE
+
+$tableFontSizeMobile: 12px;
+$primaryFontSizeMobile: 14px;
+$headerFontSizeMobile: 24px;
+$entriesFontSizeMobile: 18px;
+$parametersFontSizeMobile: 18px;

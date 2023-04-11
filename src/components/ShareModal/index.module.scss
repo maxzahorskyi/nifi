@@ -1,0 +1,41 @@
+.shareModal {
+  position: absolute;
+  z-index: 1;
+}
+
+.socialNetwork {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.socialNetworkContainer {
+
+}
+
+.socialNetworkName {
+  font-size: 18px;
+  color: #636262;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.shareContainer {
+  left: 10px;
+  position: absolute;
+  top: -16px;
+  width: 188px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 8px 19px 24px 19px;
+}
+
+.title {
+  font-size: 18px;
+  color: #636262;
+}
+
+hr.divider {
+  width: 150.02px;
+  height: 0.01px;
+  border: 2px solid #e4456c;
+  transform: rotate(-0.08deg);
+}

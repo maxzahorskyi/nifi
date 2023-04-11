@@ -1,0 +1,125 @@
+@import '../../styles/palette.scss';
+
+.modalHeader {
+}
+
+.TSModal {
+  display: grid;
+  grid-template-areas: 'body btn';
+  justify-content: space-between;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-areas: 'body' 'btn';
+    justify-content: center;
+
+  }
+
+  &__body {
+    grid-area: body;
+    display: grid;
+    grid-template-areas: 'QRCode text';
+    grid-column-gap: $standardVerticalMarginDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-areas: 'QRCode' 'text';
+    }
+
+    &_QRCode {
+      grid-area: QRCode;
+    }
+
+    &_text {
+      grid-area: text;
+      margin-right: $standardVerticalMarginDesktop;
+      width: 362px;
+
+      @media (max-width: $maxMobileWidth) {
+        width: auto;
+      }
+    }
+  }
+
+  &__btn {
+    grid-area: btn;
+
+    @media (max-width: $maxMobileWidth) {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.tsLinkButton {
+  display: flex;
+  justify-content: center;
+  background: $deepBlueColor;
+  height: 46px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25);
+  width: 230px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.TSlink {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  grid-column-gap: $extraThinVerticalMarginDesktop;
+  transition: 0.5s;
+  color: $textWhiteColor;
+  cursor: pointer;
+
+  svg {
+    fill: $textWhiteColor;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    color: $textWhiteColor;
+    transition: 0.5s;
+
+    svg {
+      fill: $textWhiteColor;
+      opacity: 0.9;
+
+    }
+  }
+}
+
+.copyLink {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  grid-column-gap: $extraThinVerticalMarginDesktop;
+  margin-top: $smallVerticalMarginDesktop;
+  transition: 0.5s;
+  color: $textHintColor;
+  cursor: pointer;
+
+  @media (max-width: $maxMobileWidth) {
+    margin: $smallVerticalMarginMobile auto;
+  }
+
+  svg {
+    fill: $textHintColor;
+  }
+
+  &:hover {
+    color: lighten($textHintColor, 10%);
+    transition: 0.5s;
+
+    svg {
+      fill: lighten($textHintColor, 10%);
+    }
+  }
+}

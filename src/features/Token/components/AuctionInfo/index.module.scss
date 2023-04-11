@@ -1,0 +1,130 @@
+@import '../../../../styles/palette.scss';
+
+.currentProperties {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-column-gap: 70px;
+  grid-row-gap: 10px;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-column-gap: 16px;
+    grid-row-gap: $smallVerticalMarginMobile;
+  }
+
+  &__label {
+    font-weight: 300 !important;
+    font-size: $parametersFontSizeDesktop;
+    color: $primaryGreyColor !important;
+    @media (max-width: $maxMobileWidth) {
+      padding: 0;
+    }
+  }
+
+  &__textWithIcon {
+    font-size: $parametersFontSizeDesktop;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: calc(#{$smallBodyHorizontalMarginMobile}/ 2);
+    align-items: baseline;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: $primaryFontSizeDesktop;
+    }
+
+    svg {
+      align-self: center;
+      transform: scale(0.9);
+      width: 14px;
+      height: 18px;
+
+      @media (max-width: $maxMobileWidth) {
+        margin-right: 6px;
+        transform: scale(0.75);
+        width: 13px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__textPinkWithIcon {
+    color: $primaryPinkColor;
+    font-weight: $regularFontWeight;
+
+    svg {
+      margin-right: 6px;
+      transform: scale(0.9);
+      width: 14px;
+      height: 18px;
+
+      path {
+        fill: $primaryPinkColor;
+      }
+    }
+  }
+
+  &__personIcon {
+    display: flex;
+    align-items: center;
+    color: $primaryGreyColor;
+    font-weight: 300;
+
+    svg {
+      margin-right: 4px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__value {
+    font-weight: 300;
+    font-size: $smallVerticalMarginDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: $thinVerticalMarginMobile;
+      align-items: end;
+    }
+  }
+
+  &__valuePink {
+    font-weight: 400;
+    font-size: $parametersFontSizeDesktop;
+    color: $primaryPinkColor;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: $entriesFontSizeMobile;
+      align-items: end;
+    }
+  }
+}
+
+.offersInfo {
+  grid-column-gap: 25px;
+}
+.textWithIcon {
+  font-size: $entriesFontSizeDesktop;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: calc(#{$smallBodyHorizontalMarginMobile}/ 2);
+  align-items: baseline;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: $primaryFontSizeDesktop;
+  }
+
+  svg {
+    align-self: center;
+    transform: scale(0.9);
+    width: 14px;
+    height: 18px;
+
+    path {
+      fill: $primaryGreyColor;
+    }
+
+    @media (max-width: $maxMobileWidth) {
+      margin-right: 6px;
+      transform: scale(0.75);
+      width: 13px;
+      height: 16px;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import '../../styles/palette.scss';
+
+.fullImageViewModal {
+  padding-bottom: 0;
+  top: 0 !important;
+  width: auto !important;
+
+  &_imgFull {
+    margin: 0 auto;
+    width: 100%;
+    object-fit: contain;
+  }
+  &_watermark {
+    position: absolute;
+    height: 30%;
+  }
+  &_frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 25px !important;
+    height: 25px !important;
+    background-image: url('/icons/whiteCloseIcon.svg');
+    background-repeat: no-repeat;
+    transition: background-image 0.3s linear;
+
+    &:hover {
+      background-image: url('/icons/prymaryCloseIcon.svg');
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  :global(.ant-modal-close) {
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //@media (max-width: $maxMobileWidth) {
+    //  top: 1.4% !important;
+    //}
+  }
+
+  :global(.ant-modal-body) {
+    padding: 10px !important;
+
+    video {
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px !important;
+  margin-top: 10px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__secondaryText,
+  &__primaryText {
+    font-size: 18px;
+    font-weight: 300;
+    color: $primaryGreyColor;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    &:nth-child(1) {
+      width: 33%;
+    }
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .description {
+    &__primaryText {
+      font-size: 34px;
+    }
+
+    &__secondaryText {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .description {
+    &__primaryText {
+      font-size: $primaryFontSizeMobile;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 85%;
+    }
+
+    &__secondaryText {
+      padding-left: 10px;
+      min-width: max-content;
+      font-size: $primaryFontSizeMobile;
+    }
+  }
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //filter: blur(20px);
+  //transform: scale(1.1);
+  transition: visibility 0ms ease .3s;
+}

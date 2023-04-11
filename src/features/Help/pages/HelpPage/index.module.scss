@@ -1,0 +1,103 @@
+@import '../../../../styles/palette.scss';
+
+.buttonWrap {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.contentfulImage {
+  max-width: 100%
+}
+
+.listWrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-right: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 1);
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: 24px;
+    font-weight: $regularFontWeight;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-active {
+      color: $textHintColor;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+}
+
+.heading5, .heading6, .paragraph {
+  font-size: $primaryFontSizeDesktop;
+  color: rgba(99, 98, 98, 1);
+  // line-height: 24px;
+}
+
+.heading5, .heading6 {
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+
+.heading5 {
+  font-weight: $mediumFontWeight;
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  font-weight: $regularFontWeight;
+  margin-bottom: 15px;
+  a {
+    word-break: break-all;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 75%;
+
+  & > .paragraph {
+    margin-bottom: 30px;
+  }
+
+  li::marker {
+    font-size: $primaryFontSizeDesktop;
+    font-weight: $regularFontWeight;
+    color: rgba(99, 98, 98, 1);
+    // line-height: 24px;
+    margin-right: 10px;
+  }
+
+  li, ul {
+    .paragraph {
+      margin-left: 10px;
+    }
+  }
+}
+
+.heading6 {
+  font-style: italic;
+}

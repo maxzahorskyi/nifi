@@ -1,0 +1,23 @@
+.rounded {
+  border-radius: 4px !important;
+}
+
+.background-grey {
+  background: #F5F5F7 !important;
+  padding: 0 10px !important;
+  min-height: 40px !important;
+}
+
+.grid-button-right {
+  display: grid !important;
+  justify-items: end !important;
+  /*grid-template-columns: repeat(5, 1fr) !important;*/
+}
+
+.padding-left {
+  padding-left: 10px !important;
+}
+
+.disabled-text {
+  color: #a3a3a3 !important;
+}

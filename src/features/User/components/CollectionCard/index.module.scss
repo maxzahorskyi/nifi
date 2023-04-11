@@ -1,0 +1,147 @@
+@import '../../../../styles/palette.scss';
+
+.collectionCardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: $thinVerticalMarginDesktop;
+  grid-row-gap: $thinVerticalMarginDesktop;
+  max-width: 1306px;
+  margin: $enlargedVerticalMarginDesktop auto 0;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $extraThinVerticalMarginMobile;
+    grid-row-gap: $extraThinVerticalMarginMobile;
+  }
+}
+
+
+.collectionCard {
+  height: 450px;
+  border-radius: 16px;
+  background: $collectionCardWrapper;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: $maxMobileWidth) {
+  height: 300px;
+}
+  .wallpaper {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    @media (max-width: $maxMobileWidth) {
+      height: 190px;
+    }
+  }
+
+  .userAvatar {
+    width: $largeAvatarSizeDesktop;
+    height: $largeAvatarSizeDesktop;
+    position: absolute;
+    bottom: 110px;
+    left: 20px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    @media (max-width: $maxMobileWidth) {
+      width: $mediumAvatarSizeDesktop;
+      height: $mediumAvatarSizeDesktop;
+      bottom: 90px;
+      left: 10px;
+    }
+  }
+
+  .hoveredBlock {
+    position: absolute;
+    height: 152px;
+    width: 100%;
+    background: $backgroundLightColor;
+    border-top: 1px solid $backgroundLightColor;
+    border-left: 1px solid $collectionCardWrapper;
+    border-right: 1px solid $collectionCardWrapper;
+    transition: all 0.5s;
+    bottom: 0;
+    display: flex;
+    box-sizing: border-box;
+    @media (max-width: $maxMobileWidth) {
+      height: 112px;
+    }
+
+    .collectionInfo {
+      margin-left: 25%;
+      padding: 35px;
+      word-break: break-word;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 120px;
+
+      @media (max-width: $maxMobileWidth) {
+        padding: 35px 10px;
+        margin-left: 0;
+        grid-row-gap: 50px;
+      }
+      .title {
+        color: #252525;
+
+        font-style: normal;
+        height: min-content;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-weight: $primaryFontWeight;
+        font-size: $cardTitleFontSize;
+        line-height: 28px;
+        @media (max-width: $maxMobileWidth) {
+          font-size: $entriesFontSizeMobile;
+          line-height: 20px;
+        }
+        }
+
+        ul{
+        padding: 0;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        color: #000000;
+      }
+      li{
+        list-style-type: none}
+    }
+  }
+
+  &:hover .hoveredBlock {
+    height: 300px;
+    @media (max-width: $maxMobileWidth) {
+      height: 200px;
+    }
+  }
+
+  &:hover .userAvatar {
+    bottom: 265px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 10px #000000);
+    @media (max-width: $maxMobileWidth) {
+      bottom: 175px;
+    }
+  }
+
+  &:hover .borderedAvatar {
+    border: 3px solid #E4456C;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+

@@ -1,0 +1,19 @@
+@import '../../styles/palette.scss';
+
+.input {
+  border: 1px solid $primaryGreyColor;
+  outline: none;
+  padding: 9px 15px;
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 300;
+  width: 100%;
+
+  &:disabled {
+    border: none;
+    background-color: $backgroundLightColor;
+  }
+
+  &::placeholder {
+    color: $primaryGreyColor;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../styles/palette.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 245px;
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 400;
+  color: $activeButtonTextColor;
+  background-color: $backgroundDarkColor;
+  border: none;
+  padding: 11px 25px;
+  transition: filter 0.2s;
+  white-space: nowrap;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: $primaryFontSizeMobile;
+    text-align: center;
+    width: 100%
+  }
+
+  &__spinner {
+    margin-right: 10px !important;
+  }
+
+  &__primary {
+    background-color: $backgroundPinkColor;
+    font-size: $primaryFontSizeDesktop;
+
+    // @media ($maxMobileWidth) {
+    //    line-height: 21px;
+    //}
+  }
+
+  &__secondary {
+    background-color: transparent;
+    border: 1px solid $backgroundDarkColor;
+    color: $normalTextColor;
+
+    @media (max-width: $maxMobileWidth) {
+      // padding: 11px 25px;
+      // font-weight: normal;
+      // font-size: $parametersFontSizeMobile;
+      // line-height: 21px;
+      // text-align: center;
+      color: $normalTextColor;
+      // width: 100%;
+    }
+
+    .button__spinner {
+      :global .ant-spin-dot-item {
+        background-color: $normalTextColor !important;
+      }
+    }
+  }
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+    filter: opacity(0.7);
+  }
+
+  &:active {
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+  }
+}
+
+.spinner {
+  display: flex;
+}

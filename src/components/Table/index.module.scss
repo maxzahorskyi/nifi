@@ -1,0 +1,60 @@
+@import '../../styles/palette.scss';
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__head {
+  }
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__cell {
+    font-weight: $primaryFontWeight;
+
+    span {
+      color: $normalTextColor;
+      word-break: break-word;
+      font-size: $primaryFontSizeDesktop;
+
+      span {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      @media (max-width: $maxMobileWidth) {
+        font-size: $tableFontSizeMobile;
+
+        span {
+          -webkit-line-clamp: 1;
+          display: flex;
+          align-items: center;
+          height: 3.5em;
+        }
+      }
+    }
+  }
+
+  &__headCell {
+    text-align: left;
+    font-weight: 500;
+  }
+
+  &__headCell,
+  &__cell {
+    border-bottom: 1px solid $tableLinesColor;
+    padding: 18px 10px;
+    color: $normalTextColor;
+    font-size: $primaryFontSizeDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      padding: 15px 0;
+      font-size: $tableFontSizeMobile;
+    }
+  }
+}

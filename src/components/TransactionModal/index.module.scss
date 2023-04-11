@@ -1,0 +1,45 @@
+@import '../../styles/palette.scss';
+
+.modalHeader {
+}
+
+.transactionModalTitleMobile {
+  @media (max-width: $maxMobileWidth) {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.transavtionModal {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-column-gap: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr;
+  }
+
+  &__body {
+    width: 630px;
+
+    @media (max-width: $maxMobileWidth) {
+      width: auto;
+    }
+  }
+
+  &__btn {
+    button {
+        width: 245px;
+      }
+    
+    @media (max-width: $maxMobileWidth) {
+      button {
+        margin-top: $standardVerticalMarginMobile;
+        width: 100%;
+      }
+    }
+
+  }
+}

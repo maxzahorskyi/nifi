@@ -1,0 +1,114 @@
+@import '../../../../../styles/palette.scss';
+
+.timeTagWrap {
+  position: absolute;
+  top: 18px;
+  left: $extraThinVerticalMarginDesktop;
+  z-index: 1;
+
+}
+.timeTagDisable {
+  display: none;
+  position: absolute;
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  color: $lightGreenColor;
+  font-size: 24px;
+  font-weight: 400;
+
+  margin-bottom: 0;
+  margin-top: 0;
+
+  justify-content: flex-end;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+
+  //@media (max-width: $maxMobileWidth) {
+  //  margin-top: 48px;
+  //  margin-bottom: $smallVerticalMarginMobile;
+  //  padding-bottom: 0;
+  //}
+
+  &__saleType {
+    text-transform: uppercase;
+  }
+}
+
+.onSaleShow {
+  color: $primaryGreyColor;
+  font-size: $parametersFontSizeDesktop;
+  padding: 0 6px;
+
+  svg {
+    path {
+      fill: $primaryGreyColor;
+    }
+  }
+}
+
+.onSale {
+  color: $textWhiteColor;
+  font-size: $parametersFontSizeDesktop;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 6px;
+
+  svg {
+    path {
+      fill: #ffffff;
+    }
+  }
+}
+
+.toSmallFont {
+  font-size: $entriesFontSizeMobile;
+}
+
+.price {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $secondaryFontSizeDesktop;
+  font-weight: 400;
+  color: $normalTextColor;
+
+  &_number {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  &:last-child {
+    padding-bottom: $smallVerticalMarginDesktop;
+  }
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: $secondaryFontSizeDesktop;
+  font-weight: 400;
+  color: $normalTextColor;
+  //margin-top: $smallVerticalMarginDesktop;
+}
+
+.tonIconWrap {
+  width: 10px;
+  height: 14px;
+  margin-right: 5px;
+
+  path {
+    fill: $normalTextColor
+  }
+}

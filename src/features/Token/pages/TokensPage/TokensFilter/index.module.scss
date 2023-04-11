@@ -1,0 +1,25 @@
+@import '../../../../../styles/palette.scss';
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: $primaryGreyColor;
+  &__item {
+    margin-right: 40px;
+    transition: opacity 0.2s;
+    opacity: 1;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

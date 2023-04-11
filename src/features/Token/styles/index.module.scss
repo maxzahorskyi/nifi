@@ -1,0 +1,595 @@
+@import '../../../styles/palette.scss';
+
+.userInfo {
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: $smallVerticalMarginMobile;
+    margin-bottom: $smallVerticalMarginMobile;
+  }
+}
+
+.modalAuctionOrSale {
+  width: 1000px !important;
+
+  :global(.ant-modal-body) {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-columns: 1fr;
+
+      button {
+        margin-top: $standardVerticalMarginMobile;
+      }
+    }
+  }
+
+  :global(.ant-radio-group){
+    @media (max-width: $maxMobileWidth) {
+      grid-row-gap: $extraThinVerticalMarginMobile !important;
+    }
+  }
+
+}
+
+.token {
+  display: flex;
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+  }
+  &__image {
+    @media (max-width: $maxMobileWidth) {
+      margin-right: 0;
+    }
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      margin-top: 80px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: $primaryFontWeight;
+    font-size: 36px;
+    // line-height: 36px;
+    border-bottom: 2.5px solid $primaryPinkColor;
+    padding-bottom: 10px;
+    word-break: break-word;
+  }
+
+  &__transaction {
+    display: grid;
+    grid-template-areas:
+      'status btnTop'
+      'askCreated btnTop'
+      'submit_bids submit_bids'
+      'bids btnBottom'
+      'fees fees';
+    grid-template-columns: 1fr 245px;
+    font-size: $primaryFontSizeDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-areas:
+        'status'
+        'submit_bids'
+        'bids'
+        'askCreated'
+        'btnTop'
+        'btnBottom'
+        'fees'
+        'fees';
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__transaction_mint {
+    display: grid;
+    grid-template-areas:
+      'status mint_btn'
+      'fees fees';
+    grid-template-columns: 1fr 245px;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-areas:
+        'status'
+        'fees'
+        'mint_btn';
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__saleInfo {
+    @media (max-width: $maxMobileWidth) {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 15px;
+      width: 100%;
+      margin-bottom: $standardVerticalMarginMobile;
+    }
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  &__saleInfoItem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    &_info {
+      @media (max-width: $maxMobileWidth) {
+        flex: 1;
+        text-align: start;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: $normalTextColor;
+      }
+    }
+
+    &_desc {
+      @media (max-width: $maxMobileWidth) {
+        flex: 1;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #636262;
+      }
+    }
+
+    &_bid {
+      @media (max-width: $maxMobileWidth) {
+        flex: 1;
+        text-align: start;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #e4456c;
+      }
+    }
+  }
+
+  &__status {
+    grid-area: status;
+    margin-top: $standardVerticalMarginDesktop;
+    font-size: 36px;
+    // line-height: 36px;
+    color: $lightGreenColor;
+    text-transform: uppercase;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 24px;
+    }
+
+    &_inactive {
+      color: $textHintColor;
+    }
+  }
+  &__askCreated {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    grid-area: askCreated;
+    margin-top: $extraThinVerticalMarginDesktop;
+    font-size: 16px;
+    // line-height: 19px;
+    color: $normalTextColor;
+
+      &_proceed {
+       width: 100px;
+       height: 32px;
+       background: #0e1e3a;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+       border-radius: 4px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+       transition: filter 0.2s;
+
+       &:hover {
+         filter: opacity(0.7);
+       }
+
+       span {
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 21px;
+         color: #FFFFFF;
+       }
+
+       margin-left:20px;
+
+       @media (max-width: $maxMobileWidth) {
+         margin-left: auto;
+       }
+     }
+
+  }
+
+  &__bids_data {
+    grid-area: bids;
+  }
+
+  &__submit_bids {
+    grid-area: submit_bids;
+  }
+
+  &__btnTop {
+    grid-area: btnTop;
+  }
+
+  &__btnBottom {
+    grid-area: btnBottom;
+  }
+
+  &__mint_btn {
+    grid-area: mint_btn;
+  }
+
+  &__fees {
+    grid-area: fees;
+  }
+
+  &__statusSeries {
+    grid-area: status;
+    margin-top: $standardVerticalMarginDesktop;
+    font-size: 36px;
+    line-height: 36px;
+    color: $lightGreenColor;
+    text-transform: uppercase;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &_inactive {
+      color: $textHintColor;
+    }
+  }
+
+  &__btn_primary {
+    margin-bottom: 20px;
+    @media (max-width: $maxMobileWidth) {
+      width: 100%;
+    }
+  }
+
+  &__accepting_bids {
+    @media (max-width: $maxMobileWidth) {
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__price {
+    color: $primaryPinkColor;
+    margin-left: 30px;
+
+    svg {
+      transform: scale(1.5);
+      margin-bottom: 4px;
+      margin-right: 6px;
+
+      @media (max-width: $maxMobileWidth) {
+        transform: scale(1);
+        margin: 0;
+      }
+
+      path {
+        fill: $primaryPinkColor;
+      }
+    }
+  }
+}
+.feesMint {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: right;
+  grid-column-gap: 27px !important;
+  @media (max-width: $maxMobileWidth) {
+    justify-content: space-between;
+
+  }
+}
+
+.mintButton {
+  @media (max-width: $maxMobileWidth) {
+    margin: $standardVerticalMarginMobile auto;
+    min-width: 100% !important;
+  }
+}
+
+.likes {
+  svg {
+    transition: filter 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      filter: opacity(0.7);
+    }
+  }
+
+  &__count {
+    margin-left: 13px;
+    font-weight: 300;
+    font-size: $primaryFontSizeDesktop;
+    color: $primaryGreyColor;
+  }
+}
+
+.activities {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  margin-top: $extraLargeVerticalMarginDesktop;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+  }
+}
+.sendModalFees {
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    top: auto;
+    bottom: 40px;
+    right: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.auctionModalFees {
+  position: absolute;
+  right: $standardVerticalMarginDesktop;
+  top: 160px;
+
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    top: auto;
+    bottom: 65px;
+    right: 0;
+  }
+}
+
+.bidModalFees {
+  position: absolute;
+  right: $standardVerticalMarginDesktop;
+  top: 160px;
+
+  @media (max-width: $maxMobileWidth) {
+    position: absolute;
+    top: auto;
+    bottom: 110px;
+    right: 18px;
+    width: auto;
+    left: 18px;
+  }
+}
+
+.feesMakeBid {
+  @media (max-width: $maxMobileWidth) {
+    position: absolute;
+    bottom: 110px;
+    right: 18px;
+    width: auto;
+    left: 18px;
+  }
+}
+
+.bidAcceptedWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 115px;
+
+  @media (max-width: $maxMobileWidth) {
+    height: 240px;
+    flex-direction: column;
+    margin-bottom: 0;
+
+  }
+  &_status {
+    margin: 0 !important;
+  }
+}
+.transactionStatusAsk {
+  margin-top: -50px !important;
+  margin-bottom: 10px !important;
+
+}
+
+.bidFees {
+  position: absolute;
+  right: $standardVerticalMarginDesktop;
+  top: 160px;
+
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    top: auto;
+    bottom: 65px;
+    right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.actions {
+  margin-bottom: 40px;
+}
+
+.buttonWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 85px;
+}
+
+.properties {
+  background-color: #fafafa;
+  border: 2px solid #e5e5e5;
+  margin-top: $enlargedVerticalMarginDesktop;
+
+  &__info {
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      grid-column-gap: 30px;
+    }
+
+    &_item {
+      @media (max-width: $maxMobileWidth) {
+        display: flex;
+        grid-column-gap: 10px;
+        flex-direction: row;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #a3a3a3;
+      }
+    }
+
+    &_markBook {
+      position: relative;
+      margin-right: 10px;
+    }
+  }
+
+  padding: 2% 4%;
+  border-radius: 12px;
+}
+
+.likeBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 0 40px 0;
+
+  @media (max-width: $maxMobileWidth) {
+    padding: 10px 0 0 0;
+  }
+
+  & > p {
+    margin-bottom: 0;
+    color: #a3a3a3;
+    font-size: 18px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 23px;
+    overflow: visible !important;
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    path {
+      fill: transparent;
+      stroke: $primaryPinkColor;
+      stroke-width: 2px;
+    }
+
+    &_active {
+      animation: bounce 0.3s ease-out;
+
+      path {
+        fill: $primaryPinkColor;
+      }
+    }
+  }
+}
+
+.onSaleBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  margin-top: -85px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+    height: 60px;
+  }
+}
+
+.shareModal {
+  position: absolute;
+  z-index: 1;
+}
+
+.socialNetwork {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.socialNetworkName {
+  font-size: 18px;
+  color: #636262;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.shareContainer {
+  left: 10px;
+  position: absolute;
+  top: -16px;
+  width: 188px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 8px 19px 24px 19px;
+}
+
+.title {
+  font-size: 18px;
+  color: #4b4b4b;
+}
+
+.hrRed {
+  width: 150.02px;
+  height: 0.01px;
+  border: 2px solid #e4456c;
+  transform: rotate(-0.08deg);
+}
+
+.mobileMakeBidButton {
+  @media (max-width: $maxMobileWidth) {
+    width: 100%;
+  }
+
+  &_auction {
+    @media (max-width: $maxMobileWidth) {
+      margin-top: $smallVerticalMarginMobile;
+      width: 100%;
+    }
+  }
+}
+
+.sendTokenMobile {
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr !important;
+  }
+}

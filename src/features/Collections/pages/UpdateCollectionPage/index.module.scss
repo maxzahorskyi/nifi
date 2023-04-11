@@ -1,0 +1,126 @@
+@import '../../../../styles/palette.scss';
+
+.createToken {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: $createTokenButtonTopMarginDesktop;
+  margin-bottom: $extraLargeVerticalMarginDesktop;
+}
+
+.titleWrapper {
+  border-bottom: 2.5px solid #e4456c;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: $largeVerticalMarginMobile;
+  }
+}
+
+.create {
+
+  span:nth-child(5) {
+    align-self: flex-start;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    grid-row-gap: $smallVerticalMarginMobile !important;
+  }
+
+  &_collectionID {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    font-style: normal;
+    font-weight: $primaryFontWeight;
+    font-size: $entriesFontSizeMobile;
+    color: $textHintColor;
+
+    &_url {
+      @media (max-width: $maxMobileWidth) {
+        // line-height: 1.5715;
+      }
+    }
+
+    &_inputId {
+      text-transform: lowercase;
+      color: $textHintColor !important;
+
+    }
+  }
+}
+
+.formWrapper {
+  display: grid;
+
+  &_row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: $largeVerticalMarginDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-columns: 1fr;
+      margin-top: 20px;
+    }
+  }
+
+  &__createCollectionButton {
+    margin-left: auto;
+    @media (max-width: $maxMobileWidth) {
+      margin-top: $largeVerticalMarginMobile;
+      width: 100%;
+    }
+  }
+
+  &__imageUpload {
+    margin-top: $extraLargeVerticalMarginDesktop;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-column-gap: $largeVerticalMarginDesktop !important;
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 0;
+      grid-row-gap: 0 !important;
+
+    }
+  }
+}
+
+.hint {
+  color: $textHintColor;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.buttonWrap {
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+}
+
+.mediaInput {
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+}
+
+.inputWrap {
+  input, textarea {
+    font-style: normal;
+    font-weight: $primaryFontWeight;
+    font-size: $entriesFontSizeMobile !important;
+    color: $normalTextColor;
+
+  }
+
+  padding: 0;
+  margin-bottom: 0 !important;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+}

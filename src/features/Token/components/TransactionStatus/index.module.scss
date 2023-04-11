@@ -1,0 +1,83 @@
+@import '../../../../styles/palette.scss';
+
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 68%;
+  height: 68px;
+  background: $warningColor;
+  padding: 12px;
+  margin-top: 20px;
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+.wrapperSurf{
+  height: max-content !important;
+  width: max-content !important;
+  background: $textWhiteColor;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.wrapperExtraton{
+  height: max-content !important;
+  width: max-content !important;
+  background: $textWhiteColor;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+  }
+}
+
+.circleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .line {
+    height: 6px;
+    width: 20px;
+    background: #C4C4C4;
+  }
+}
+.pink {
+  background: $backgroundPinkColor !important;
+}
+.circle {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #C4C4C4;
+  color: $textWhiteColor;
+  justify-content: center;
+  align-items: center;
+}
+
+.textWrapper {
+  font-weight: 400;
+  padding-left: 16px;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: $normalTextColor;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.steps {
+  font-weight: 400;
+  padding-left: 16px;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: $normalTextColor;
+}

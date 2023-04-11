@@ -1,0 +1,44 @@
+@import '../../styles/palette.scss';
+
+.linkList {
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 400;
+  color: $primaryGreyColor;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+    justify-content: flex-end;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .icon {
+      margin-right: 4px !important;
+      margin-bottom: 3px !important;
+      @media (max-width: $maxMobileWidth) {
+        margin-bottom: 0;
+      }
+    }
+
+    &_active {
+      color: $primaryPinkColor;
+
+      .icon path {
+        fill: $primaryPinkColor;
+      }
+    }
+  }
+
+  &__title {
+    min-width: max-content;
+  }
+}

@@ -1,0 +1,345 @@
+@import 'palette';
+@import 'fonts';
+@import 'override';
+
+html {
+  overflow-x: hidden !important;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif !important;
+  min-width: 100% !important;
+  overflow: visible !important;
+  overflow-x: clip !important;
+}
+
+.dot {
+  margin: 0 20px !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+li.slick-active {
+  background: transparent !important;
+}
+
+li.slick-active > button {
+  background: transparent !important;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff !important;
+  background: #e82053;
+}
+
+.ant-collapse-content-box {
+  padding: 18px 0 !important;
+}
+
+.ant-collapse-arrow {
+  right: 16px !important;
+  left: unset !important;
+}
+
+.ant-collapse-header {
+  padding-left: 18px !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  position: sticky;
+  top: 1px;
+}
+.ant-collapse-content {
+  border-top: none !important;
+}
+.ant-collapse {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dottedTextListItem {
+  font-size: $primaryFontSizeDesktop;
+  font-weight: $regularFontWeight;
+  color: $primaryGreyColor;
+  margin-bottom: 0;
+  // line-height: 24px;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: $primaryFontSizeMobile;
+  }
+}
+
+.username {
+  display: flex;
+  margin-top: 5px;
+  height: 56px;
+  justify-content: space-between;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $primaryFontSizeDesktop;
+  // line-height: 21px;
+  color: $normalTextColor;
+
+  @media (max-width: $maxMobileWidth) {
+    // margin-top: 5px;
+    height: 46px;
+
+    span {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      word-break: break-word;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+
+  @media (min-width: 2000px) {
+    width: 8px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(163, 163, 163, 0.6);
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.link {
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &_disabled {
+    pointer-events: none;
+  }
+}
+
+// MODAL RESET
+
+.ant-modal-wrap {
+  overflow-x: hidden !important ;
+}
+
+.ant-modal-content {
+  border-radius: 4px !important;
+}
+
+.modal {
+  width: 1000px !important;
+  top: $extraLargeVerticalMarginDesktop !important;
+  padding: 0 !important;
+
+  @media (max-width: $maxMobileWidth) {
+    max-width: 100vw !important;
+    top: $standardVerticalMarginMobile !important;
+  }
+
+  .ant-modal-content {
+    border-radius: 4px !important;
+  }
+
+  .ant-modal-header {
+    height: $modalHeaderHeightDesktop !important;
+    margin: 0 $standardVerticalMarginDesktop !important;
+    padding: 24px 0 0 !important;
+    border-bottom: 2px solid #e4456c !important;
+    @media (max-width: $maxMobileWidth) {
+      height: $modalHeaderHeightMobile !important;
+      margin: 0 $bodyHorizontalMarginMobile !important;
+      padding: $thinVerticalMarginMobile 0 0 !important;
+    }
+  }
+
+  .ant-modal-title {
+    font-weight: $primaryFontWeight !important;
+    font-size: $modalHeaderFontSizeDesktop !important;
+    line-height: 1.15 !important;
+    white-space: nowrap;
+
+    color: $textDarkColor;
+    @media (max-width: $maxMobileWidth) {
+      font-size: $headerFontSizeMobile !important;
+      line-height: 28px !important;
+    }
+  }
+
+  .anticon svg {
+    display: none !important;
+  }
+
+  .ant-modal-close {
+    top: calc(#{$standardVerticalMarginDesktop} - 5px) !important;
+    right: $standardVerticalMarginDesktop !important;
+
+    @media (max-width: $maxMobileWidth) {
+      top: $thinVerticalMarginMobile !important;
+      right: $bodyHorizontalMarginMobile !important;
+    }
+  }
+
+  .ant-modal-close-x {
+    width: 25px !important;
+    height: 25px !important;
+    line-height: unset;
+    background-image: url('/icons/iconClose.svg');
+    background-repeat: no-repeat;
+  }
+
+  .ant-modal-body {
+    padding: $standardVerticalMarginDesktop !important;
+    font-size: $primaryFontSizeDesktop !important;
+
+    @media (max-width: $maxMobileWidth) {
+      padding: $standardVerticalMarginDesktop $bodyHorizontalMarginMobile !important;
+    }
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  input {
+    font-weight: $regularFontWeight !important;
+  }
+
+}
+
+.ant-radio-group {
+  display: grid !important;
+  grid-template-columns: max-content max-content max-content !important;
+  grid-column-gap: $standardVerticalMarginDesktop !important;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.ant-input,
+.ant-picker-input > input {
+  //font-size: $parametersFontSizeDesktop !important;
+}
+
+.ant-radio-wrapper {
+  font-weight: $primaryFontWeight !important;
+  font-size: $primaryFontSizeDesktop !important;
+  color: $textDarkColor !important;
+  line-height: 1.15 !important;
+}
+
+.ant-select-selector {
+  height: max-content !important;
+}
+
+.pinkArrowWithText {
+  font-size: $primaryFontSizeDesktop;
+  display: flex;
+  align-items: baseline;
+
+  svg {
+    margin-right: 6px;
+    fill:$primaryPinkColor !important;
+  }
+}
+
+.ant-skeleton-avatar {
+  background: $anonymousColor !important;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.ant-select:not(.ant-pagination-options) {
+  font-size: $primaryFontSizeDesktop !important;
+  width: 100% !important;
+}
+
+.ant-select-arrow {
+  left: 0 !important;
+}
+
+.ant-select-selector {
+  padding: 0 !important;
+}
+
+.ant-select-selection-item {
+  padding: 0 0 0 25px !important;
+
+  &:first-letter {
+    text-transform: capitalize !important;
+  }
+}
+
+.ant-select-dropdown, .ant-picker-panel-container, .rc-virtual-list {
+  border-radius: 4px !important;
+}
+
+.ant-select-item-option-content:first-letter {
+  text-transform: capitalize !important;
+}
+.ant-form-item-explain {
+  display: none !important;
+}
+
+.createButton {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.4s;
+  &:hover {
+    color: #0070f3;
+  }
+}

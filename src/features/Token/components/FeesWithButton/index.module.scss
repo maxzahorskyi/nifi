@@ -1,0 +1,55 @@
+@import '../../../../styles/palette.scss';
+
+.feesBlock {
+  width: 245px;
+  margin-left: auto;
+
+  :global(.dottedTextListItem) {
+    font-size: 14px !important;
+  }
+}
+
+.feesRow {
+  margin: 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: black;
+  border-bottom: 0.6px solid #000000;
+  font-weight: 300;
+  svg {
+    transform: rotate(90deg);
+    margin-left: 5px;
+    margin-right: 10px;
+    path {
+      fill: #636262;
+    }
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 60px;
+  }
+}
+.feesTitle {
+
+}
+
+.list {
+  font-size: 14px !important;
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 15px !important;
+  }
+}
+
+.feesIcon {
+  display: flex;
+  flex-direction: row;
+}
+
+.thinIcon {
+  font-size: 18px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 300;
+}

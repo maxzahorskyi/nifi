@@ -1,0 +1,35 @@
+@import '../../../../styles/palette.scss';
+.days {
+  font-family: 'Digital Numbers', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 83px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FE86A3;
+
+  text-shadow: 0 4px 10px $primaryPinkColor;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: 36px;
+
+  }
+}
+.time {
+  font-family: 'Digital Numbers', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 93px;
+  text-align: center;
+  margin: 0 auto;
+  color: #52DA3C;
+  text-shadow: 0px 4px 10px #52DA3C;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: 36px;
+    line-height: 88px;
+    position: relative;
+  }
+}

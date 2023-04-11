@@ -1,0 +1,108 @@
+@import '../../styles/palette.scss';
+
+.category {
+  margin-bottom: $extraLargeVerticalMarginDesktop;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 40px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    padding-top: $largeVerticalMarginDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      padding-top: $standardVerticalMarginMobile;
+    }
+  }
+}
+
+.categoryDeep {
+  padding: 0 6% 60px;
+  background: $deepBlueColor;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    max-width: 1306px;
+    margin: 0 auto;
+    padding-top: $largeVerticalMarginDesktop;
+
+    @media (max-width: $maxMobileWidth) {
+      padding-top: 35px;
+    }
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+   &_title {
+     display: flex;
+     flex-direction: row;
+     align-self: baseline;
+     align-content:baseline;
+     padding-top: 14px;
+     @media (max-width: $maxMobileWidth) {
+       padding-top: 25px;
+       padding-bottom: 25px;
+
+     }
+
+   }
+
+  .themeSwitcher {
+    margin-top: 14px;
+    margin-right: auto;
+    margin-left: 30px;
+    @media (max-width: $maxMobileWidth) {
+      margin: 0 auto 4px 20px;
+    }
+  }
+
+  &_titleDeep {
+    display: flex;
+    flex-direction: row;
+    align-self: baseline;
+    align-content:baseline;
+    padding-top: 64px;
+    color: $textWhiteColor;
+    @media (max-width: $maxMobileWidth) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    margin: 0 0 0 -18px;
+    position: sticky;
+    z-index: 99;
+    background: white;
+    min-height: 47px;
+    padding: 0 $bodyHorizontalMarginMobile;
+    width: 100vw;
+  }
+}
+
+.titleToTop {
+  top: -1px;
+  transition: top 0.3s ease 0s;
+}
+.titleUnderHeader {
+  top: 50px;
+  transition: top 0.3s ease 0s;
+}

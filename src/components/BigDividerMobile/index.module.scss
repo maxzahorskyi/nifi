@@ -1,0 +1,23 @@
+@import '../../styles/palette.scss';
+
+.bigDividerWrapper {
+  display: none;
+  @media (max-width: $maxMobileWidth) {
+    display: block;
+    position: relative;
+  }
+}
+
+.bigDivider {
+  display: none;
+  @media (max-width: $maxMobileWidth) {
+    display: block;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border: 4px solid $lightGreyColor;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../styles/palette.scss';
+
+
+
+.wrapper {
+  width: 500px;
+  overflow: hidden;
+  @media (max-width: $maxMobileWidth) {
+    width: 100%;
+  }
+}
+.titleRow {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  border-bottom: 1px solid $tableLinesColor;
+  color: $normalTextColor;
+  font-size: 18px;
+  padding: 18px 10px;
+  box-sizing: border-box;
+  @media (max-width: $maxMobileWidth) {
+    padding: 18px 10px 18px 0;
+  }
+}
+
+.foreverTitleRow {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+  padding: 18px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 2px solid $primaryPinkColor;
+}
+
+.tokenInfoRow {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  border-bottom: 1px solid $tableLinesColor;
+  padding: 5px 10px;
+  @media (max-width: $maxMobileWidth) {
+    padding: 5px 10px 5px 0;
+  }
+}
+.token {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+.user {
+  height: 40px;
+  align-self: center;
+}
+
+.tokenTitle {
+  color: #4b4b4b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 18px;
+}

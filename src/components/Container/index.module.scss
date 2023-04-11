@@ -1,0 +1,18 @@
+@import '../../styles/palette.scss';
+
+.container {
+  width: 1450px;
+  margin: 0 auto;
+  padding: 0 72px;
+  //overflow: hidden !important;
+
+  @media (max-width: 1450px) {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100%;
+    padding: 0 18px;
+  }
+}

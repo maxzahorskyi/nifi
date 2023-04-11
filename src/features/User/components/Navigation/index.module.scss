@@ -1,0 +1,33 @@
+@import '../../../../styles/palette.scss';
+
+.navigation {
+  padding-bottom: 77px;
+  &__avatar {
+    margin-right: 20px;
+    img {
+    object-fit: cover;
+    }
+  }
+}
+
+.avatarWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 20px;
+  }
+}
+
+.buttonWrap {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 28px;
+  padding-bottom: 68px;
+
+  @media (max-width: $maxMobileWidth) {
+    justify-content: center;
+  }
+}

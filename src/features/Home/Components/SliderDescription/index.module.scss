@@ -1,0 +1,34 @@
+@import '../../../../styles/palette.scss';
+.container {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 14.5%;
+  left: 26px;
+  width: 35%;
+  cursor: pointer;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: 24px;
+    padding: 13px;
+    width: 50%;
+    bottom: 35px;
+  }
+  .sliderText {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #ffffff;
+    text-align: left;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .redLine {
+    width: 100%;
+    border: 1px solid $primaryPinkColor;
+    margin-top: 15px;
+  }
+}

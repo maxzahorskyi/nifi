@@ -1,0 +1,194 @@
+@import '../../../../../../../styles/palette.scss';
+
+.card {
+  .cardWrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+
+    &__image {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        object-position: center center;
+        min-height: 170px;
+      }
+
+      :global .ant-skeleton-element {
+        height: 100% !important;
+        width: 100%;
+        @media (max-width: $maxMobileWidth) {
+          width: 100%;
+        }
+      }
+
+      :global .ant-skeleton-image {
+        width: 100%;
+        min-height: 170px;
+        @media (max-width: $maxMobileWidth) {
+          width: 100%;
+        }
+      }
+    }
+
+    &_actionText {
+      @media (max-width: $maxMobileWidth) {
+        font-weight: normal;
+        font-size: $entriesFontSizeMobile;
+        line-height: 21px;
+        text-align: right;
+        width: max-content;
+        color: #6bbf00;
+
+        margin-bottom: 10px;
+      }
+    }
+
+    &_currentBidTextWrap {
+      @media (max-width: $maxMobileWidth) {
+        display: flex;
+        justify-content: space-between;
+        grid-column-gap: 25px;
+        width: max-content;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $primaryGreyColor;
+        margin-bottom: 25px;
+      }
+    }
+
+    &_description {
+      @media (max-width: $maxMobileWidth) {
+        font-style: normal;
+        font-weight: 300;
+        font-size: $entriesFontSizeMobile;
+        line-height: 21px;
+        color: $textDarkColor;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_active {
+      padding: 18px $extraThinVerticalMarginDesktop
+      $smallVerticalMarginDesktop;
+      opacity: 0;
+      color: $textWhiteColor;
+      background-color: rgba(247, 247, 247, 0.9);
+      min-height: inherit;
+
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: flex-end;
+      //z-index: 1;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      //@media (max-width: $maxMobileWidth) {
+      //  padding: $smallVerticalMarginMobile $extraThinVerticalMarginMobile;
+      //}
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      &__header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: $enlargedVerticalMarginDesktop;
+        color: $lightGreenColor;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      &__price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $secondaryFontSizeDesktop;
+        font-weight: 400;
+        color: $primaryGreyColor;
+        padding-bottom: 30px;
+      }
+
+      &__cardName {
+        font-size: 24px;
+        line-height: 20px;
+        color: black;
+        font-weight: 300;
+        overflow-wrap: break-word;
+        word-break: break-word;
+
+        &__wrap {
+          margin-bottom: 25px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+
+          &__wrap {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &__cardSubName {
+        font-size: $entriesFontSizeDesktop;
+        color: black;
+        font-weight: 400;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        &__wrap {
+          margin-bottom: 25px;
+
+          @media (max-width: 576px) {
+            margin-top: $largeVerticalMarginMobile;
+          }
+        }
+      }
+
+      &__edition {
+        font-size: 15px;
+        font-weight: 400;
+        color: $primaryGreyColor;
+        &__wrap {
+          margin-bottom: 25px;
+          min-height: 19px;
+
+          @media (max-width: $maxMobileWidth) {
+            margin: $smallVerticalMarginDesktop 0;
+          }
+        }
+      }
+    }
+
+    &_previewIcon {
+      position: absolute;
+      right: $smallVerticalMarginDesktop;
+      bottom: $smallVerticalMarginDesktop;
+      margin-top: auto;
+      cursor: pointer;
+    }
+
+    &:hover &_active {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}

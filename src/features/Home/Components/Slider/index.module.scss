@@ -1,0 +1,49 @@
+@import '../../../../styles/palette.scss';
+
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  height: 447px;
+
+    @media (max-width: $maxMobileWidth) {
+      height: 250px
+    }
+}
+
+.slideImage {
+  min-height: 100%;
+  object-fit: cover ;
+
+}
+
+.mobileTokenCarouselDots {
+  //top: 300px !important;
+  bottom: 180px !important;
+  & > li {
+    border-radius: 100% !important;
+    background: white;
+    border: 2px solid white;
+    height: 12px !important;
+    width: 12px !important
+  }
+
+  & > li > button {
+    height: 12px !important
+  }
+  :global(.slick-dots-bottom) {
+    bottom: 220px;
+  }
+}
+
+.imageWrap {
+  width: 100%;
+  position: relative;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}

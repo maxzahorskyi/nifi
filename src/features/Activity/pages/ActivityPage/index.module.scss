@@ -1,0 +1,142 @@
+@import '../../../../styles/palette.scss';
+
+.buttonLinkWrapper {
+  button {
+    margin-left: auto;
+    margin-top: $createTokenButtonMargin;
+  }
+}
+
+.activitiesCategory {
+  margin-top: 80px;
+
+  li:last-child > div:first-child {
+    width: 100px !important;
+    font-size: 14px !important;
+
+    > span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.activitiesPagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+
+  .ant-pagination-item-active {
+    & > a {
+      color: #ffffff;
+      background: #e82053;
+    }
+  }
+}
+
+.token {
+  display: flex;
+  align-items: center;
+
+  span {
+    min-width: 200px;
+    max-width: 200px;
+    line-height: 20px;
+
+    @media (max-width: $maxMobileWidth) {
+      min-width: auto;
+    }
+  }
+
+
+  &__image {
+    margin-top: -18px;
+    margin-bottom: -17px;
+    margin-right: 16px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-right: 0;
+    }
+  }
+}
+.infoColumn {
+  display: flex;
+  align-items: flex-start !important;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: 66px !important;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 15px;
+  span {
+    @media (max-width: $maxMobileWidth) {
+      height: 1.5em !important;
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      color: $textDarkColor;
+      font-weight: 400;
+    }
+  }
+}
+
+.authorRow {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 13px;
+  height: 66px;
+  justify-content: space-between;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-left: 8px;
+  }
+
+  div span span {
+    height: 2em;
+
+    @media (min-width: 435px) {
+      height: 3em;
+    }
+  }
+}
+.userInfoRow {
+  display: flex !important;
+  align-items: center !important;
+  max-width: 185px;
+  img {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  @media (max-width: $maxMobileWidth) {
+    width: 120px;
+  }
+}
+.userName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  font-weight: 400;
+  color: #000;
+  line-height: 20px;
+}
+.userLink {
+  display: block;
+}
+
+.edition {
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+
+    &__img {
+      width: 30px;
+      height: 30px;
+
+      @media (max-width: $maxMobileWidth) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

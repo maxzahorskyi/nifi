@@ -1,0 +1,28 @@
+@import '../../../../styles/palette.scss';
+
+.chartsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .chart {
+    background: white;
+    width: 49.5%;
+    box-shadow: 0 9px 15px -4px #636262;
+    padding: 20px;
+    @media (max-width: $maxMobileWidth) {
+      width: 100%;
+      height: 200px !important;
+      padding: 10px;
+
+    }
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+    .chart:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+}

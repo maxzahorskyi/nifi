@@ -1,0 +1,43 @@
+@import '../../styles/palette.scss';
+
+.textList {
+  display: flex;
+  flex-direction: column;
+  font-size: $secondaryFontSizeDesktop;
+  font-weight: 400;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: $primaryFontSizeMobile;
+  }
+  &__title {
+    color: $textDarkColor;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    color: $normalTextColor;
+    margin-bottom: 10px;
+
+    word-break: break-word;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    //&:hover {
+    //  cursor: pointer;
+    //}
+
+    a {
+      color: $normalTextColor;
+    }
+  }
+}

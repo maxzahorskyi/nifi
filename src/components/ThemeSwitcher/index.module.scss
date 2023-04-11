@@ -1,0 +1,8 @@
+@import '../../styles/palette.scss';
+
+.switch {
+  //background color for active status theme switcher
+  :global(.ant-switch-checked) {
+    background-color: $backgroundPinkColor !important;
+  }
+}

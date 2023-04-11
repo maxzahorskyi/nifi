@@ -1,0 +1,82 @@
+@import '../../styles/palette.scss';
+
+.properties {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-row-gap: $standardVerticalMarginDesktop;
+  grid-column-gap: $standardVerticalMarginDesktop;
+  font-size: $primaryFontSizeDesktop;
+  align-items: baseline;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr; //!important;
+    grid-column-gap: $extraThinVerticalMarginMobile;
+  }
+}
+
+.feesIcon {
+  position: absolute;
+  right: 33px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: $primaryGreyColor;
+
+  img {
+    object-fit: contain;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    display: none !important;
+  }
+}
+
+.rowWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label {
+  white-space: nowrap;
+  color: $textDarkColor;
+  font-weight: 500;
+
+  @media (max-width: $maxMobileWidth) {
+    font-weight: normal;
+    font-size: $parametersFontSizeMobile;
+    line-height: 21px;
+    padding-top: 20px;
+    text-align: start;
+  }
+
+  &_highlighted {
+    color: $primaryPinkColor;
+  }
+  &_black {
+    svg {
+      fill:$textDarkColor !important ;
+    }
+    color: $textDarkColor !important;
+  }
+  &_grey {
+    color: $textHintColor !important;
+  }
+}
+
+.dn {
+  display: none;
+}
+
+.value {
+  color: $normalTextColor;
+  font-weight: 300;
+
+  @media (max-width: $maxMobileWidth) {
+    font-weight: 300;
+    font-size: $parametersFontSizeMobile;
+    line-height: 21px;
+  }
+}

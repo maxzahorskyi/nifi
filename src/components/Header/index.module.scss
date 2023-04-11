@@ -1,0 +1,221 @@
+@import '../../styles/palette.scss';
+
+.wrap {
+  color: var(--text);
+  background-color: $backgroundLightColor;
+}
+
+.content {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+
+  @media (max-width: $maxMobileWidth) {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+}
+
+.bg {
+  background-color: $backgroundLightColor;
+  width: 100%;
+  z-index: 110 !important;
+  //box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+
+  a {
+    line-height: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__navigations {
+    display: flex;
+  }
+}
+
+.linkButtons {
+  display: flex;
+  margin-right: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-right: 15px;
+  }
+
+  &__button {
+    padding-right: 50px;
+    margin: auto 0;
+
+    @media (max-width: $maxMobileWidth) {
+      padding-right: 10px;
+      margin-bottom: 20px;
+
+      & > button {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #000000;
+      }
+    }
+
+    & > button {
+      padding: 1px 0;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__buttonSupportLink {
+    padding-bottom: 20px;
+    padding-right: 10px;
+
+    & > button {
+      padding-left: 0px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+
+      color: #000000;
+    }
+  }
+}
+
+.linkIcons {
+  display: flex;
+
+  &__icon {
+    padding-right: 30px;
+    margin: auto 0;
+    img {
+      object-fit: cover;
+    }
+    &:hover {
+      cursor: pointer;
+      transition: filter 0.2s;
+      filter: opacity(0.7);
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+.personIcon {
+  margin: 0 1px;
+  width: 23.2px;
+  height: 28px;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 19px;
+    height: 23px;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: opacity(0.7);
+  }
+}
+
+.modalHeader {
+  width: 1000px !important;
+}
+
+
+.warningModal {
+}
+
+.warningMessage {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+
+  p {
+    margin-left: 33px;
+    @media (max-width: $maxMobileWidth) {
+      margin-left: 18px;
+    }
+  }
+
+  ul {
+    padding: 0 56px;
+  }
+  a {
+    padding-left: 4px;
+  }
+
+  li::marker {
+    font-size: 0.7em;
+    height: 18px;
+  }
+}
+
+.TSlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: $extraThinVerticalMarginDesktop;
+  transition: 0.5s;
+  background: $deepBlueColor;
+  color: $textWhiteColor;
+  border-radius: 6px;
+  height: 46px;
+  width: 230px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-top: $thinVerticalMarginDesktop;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-left: 0;
+    margin-bottom: $standardVerticalMarginMobile;
+  }
+
+  svg {
+    fill: $textWhiteColor;
+  }
+
+  &:hover {
+    color: lighten($textWhiteColor, 10%);
+    transition: 0.5s;
+
+    svg {
+      fill: lighten($textWhiteColor, 10%);
+    }
+  }
+}
+
+
+.walletWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 50px;
+  font-weight: 400;
+  font-size: $primaryFontSizeDesktop;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-right: 15px;
+    font-size: $primaryFontSizeMobile;
+  }
+}

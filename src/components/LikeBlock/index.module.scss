@@ -1,0 +1,65 @@
+@import '../../styles/palette.scss';
+.likeBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 0 40px 0;
+
+  @media(max-width: $maxMobileWidth) {
+    padding: 10px 0 0 0;
+  }
+
+  & > p {
+    margin-bottom: 0;
+    color: #A3A3A3;
+    font-size: 18px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 23px;
+    overflow: visible !important;
+    cursor: pointer;
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    path {
+      fill: transparent;
+      stroke: $primaryPinkColor;
+      stroke-width: 2px;
+      transition: fill 0.3s linear;
+    }
+
+    &:hover {
+
+      path {
+        fill: $primaryPinkColor;
+        transition: fill 0.3s linear;
+      }
+    }
+
+    &_active {
+      animation: bounce 0.3s ease-out;
+
+      path {
+        fill: $primaryPinkColor;
+        transition: fill 0.3s linear;
+      }
+    }
+  }
+}
+
+
+.shareModal {
+  position: absolute;
+  z-index: 1;
+};

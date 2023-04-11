@@ -1,0 +1,148 @@
+@import '../../styles/palette.scss';
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $maxMobileWidth) {
+    padding: 0;
+  }
+
+}
+.buttonWrap {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 78px;
+}
+
+.listWrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-right: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 1);
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: $parametersFontSizeDesktop;
+    font-weight: $regularFontWeight;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-active {
+      color: $textHintColor;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    @media (max-width: $maxMobileWidth) {
+      font-style: normal;
+      line-height: 28px;
+
+      color: $normalTextColor;
+
+      position: sticky;
+      top: 40px;
+    }
+  }
+}
+
+.heading5, .heading6, .paragraph {
+  font-size: $primaryFontSizeDesktop;
+  color: $normalTextColor;
+}
+
+.heading5, .heading6 {
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+
+.heading5 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  font-weight: $regularFontWeight;
+}
+
+.contentWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 75%;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100%
+  }
+
+  & > .paragraph {
+    margin-bottom: 30px;
+  }
+
+  li::marker {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(99, 98, 98, 1);
+    // line-height: 24px;
+    margin-right: 10px;
+  }
+
+  li, ul {
+    .paragraph {
+      margin-left: 10px;
+    }
+  }
+
+  :global(.HelpPage_paragraph__117ds) {
+    color: $normalTextColor;
+  }
+}
+
+.heading6 {
+  font-style: italic;
+}
+
+.mobileHeaderToTop {
+    :global(.ant-collapse-header) {
+      position: sticky !important;
+      top: 0 !important;
+      background-color: #FFFFFF;
+
+      @media (max-width: $maxMobileWidth) {
+      padding: 12px 0 !important;
+      }
+
+    }
+}
+
+.mobileHeaderUnder {
+  :global(.ant-collapse-header) {
+    position: sticky !important;
+    top: 50px !important;
+    background-color: #FFFFFF;
+
+    @media (max-width: $maxMobileWidth) {
+      padding: 12px 0 !important;
+    }
+
+  }
+}

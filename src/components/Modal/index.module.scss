@@ -1,0 +1,118 @@
+@import '../../styles/palette.scss';
+
+.modal {
+  width: 1000px !important;
+  top: $extraLargeVerticalMarginDesktop !important;
+  padding: 0 !important;
+  @media (max-width: $maxMobileWidth) {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    top: $standardVerticalMarginMobile !important;
+  }
+
+
+  :global(.ant-modal-content) {
+    border-radius: 4px !important;
+  }
+
+  :global(.ant-modal-header) {
+    height: $modalHeaderHeightDesktop !important;
+    margin: 0 $standardVerticalMarginDesktop !important;
+    padding: 24px 0 0 !important;
+    border-bottom: 2px solid #e4456c !important;
+    @media (max-width: $maxMobileWidth) {
+      height: $modalHeaderHeightMobile !important;
+      margin: 0 $bodyHorizontalMarginMobile !important;
+      padding: $thinVerticalMarginMobile 0 0 !important;
+    }
+  }
+
+  :global(.ant-modal-title) {
+    font-weight: $primaryFontWeight !important;
+    font-size: $modalHeaderFontSizeDesktop !important;
+    line-height: 1.15 !important;
+    white-space: nowrap;
+
+    color: $textDarkColor;
+    @media (max-width: $maxMobileWidth) {
+      font-size: $headerFontSizeMobile !important;
+      line-height: 28px !important;
+    }
+  }
+
+  :global(.anticon svg) {
+    display: none !important;
+  }
+
+  :global(.ant-modal-close) {
+    top: calc(#{$standardVerticalMarginDesktop} - 5px) !important;
+    right: $standardVerticalMarginDesktop !important;
+
+    @media (max-width: $maxMobileWidth) {
+      top: $thinVerticalMarginMobile !important;
+      right: $bodyHorizontalMarginMobile !important;
+    }
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 25px !important;
+    height: 25px !important;
+    line-height: unset;
+    background-image: url('/icons/iconClose.svg');
+    background-repeat: no-repeat;
+  }
+
+  :global(.ant-modal-body) {
+    padding: $standardVerticalMarginDesktop !important;
+    font-size: $primaryFontSizeDesktop !important;
+
+    @media (max-width: $maxMobileWidth) {
+      padding: $standardVerticalMarginDesktop $bodyHorizontalMarginMobile !important;
+    }
+  }
+
+  :global(.ant-modal-footer) {
+    display: none;
+  }
+
+  input {
+    font-weight: $regularFontWeight !important;
+    color: $normalTextColor !important;
+  }
+
+}
+.feesBlock {
+  width: 245px;
+  margin-left: auto;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100%;
+  }
+
+  :global(.dottedTextListItem) {
+    font-size: 14px !important;
+  }
+}
+
+.feesRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $extraThinVerticalMarginDesktop;
+  margin-bottom: $extraThinVerticalMarginDesktop;
+  font-weight: $primaryFontWeight;
+  font-size: 18px;
+  color: $textDarkColor;
+  border-bottom: 0.6px solid #000000;
+  svg {
+    transform: rotate(90deg);
+    margin-left: 5px;
+    margin-right: 10px;
+    path {
+      fill: #636262;
+    }
+  }
+}
+.feesTitle {
+
+}
+

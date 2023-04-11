@@ -1,0 +1,530 @@
+@import '../../../styles/palette.scss';
+
+.form {
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 15px !important;
+  grid-area: form;
+
+  &__label {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: $parametersFontSizeDesktop;
+    color: $primaryPinkColor !important;
+
+
+    @media (max-width: $maxMobileWidth) {
+      font-style: normal;
+      line-height: 21px;
+    }
+  }
+
+  &__textWithIcon {
+    font-size: $primaryFontSizeDesktop;
+    display: flex;
+    align-items: baseline;
+
+    svg {
+      margin-right: 6px;
+      fill:$primaryPinkColor !important;
+    }
+  }
+
+  &__blackTextWithIcon {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    padding: 5px 5px 5px 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    border-bottom: 0.6px solid #000000;
+    svg {
+      transform: rotate(90deg);
+      margin-left: 5px;
+      margin-right: 10px;
+      path {
+        fill: #636262;
+      }
+    }
+    @media (max-width: $maxMobileWidth) {
+      border-bottom: none;
+      font-weight: normal;
+      font-size: 0;
+      width: 0;
+
+      &:after {
+        font-size: 18px;
+        content: 'Fees';
+      }
+
+      svg {
+        display: none !important;
+      }
+    }
+  }
+
+  &__value {
+    font-weight: 300;
+    font-size: 24px;
+
+    @media (max-width: $maxMobileWidth) {
+      align-items: end;
+    }
+  }
+}
+.priceBid {
+  //width: 175px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+
+  > span {
+    margin-right: 10px;
+  }
+}
+
+.formControlWrap {
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.formControl {
+  padding-top: 4px !important;
+}
+.optionClassName {
+  font-weight: 300 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
+  color: #4b4b4b !important;
+}
+
+.selectFormInput {
+
+ min-width: 220px;
+
+  :global(.ant-select-selection-item) {
+    padding-left: 18px !important;
+    padding-right:  0 !important;
+  }
+
+  :global(.ant-select-selector) {
+    border: none !important;
+  }
+
+  :global(.ant-select-selection-item) {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: $normalTextColor;
+  }
+  :global(.ant-select-open) {
+    border: none !important;
+  }
+  :global(.ant-select-arrow) {
+    position: absolute;
+    left: 0;
+    margin-top: -3px;
+    width: 18px;
+    height: 10px;
+    background-image: url('/icons/arrowBottom.svg');
+    background-repeat: no-repeat;
+
+    svg {
+      display: none !important;
+    }
+  }
+}
+.requestEndorseFees {
+  position: absolute;
+  top: 160px;
+  right: $standardVerticalMarginDesktop;
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    top: auto;
+    bottom: $largeVerticalMarginMobile;
+    right: 0;
+    margin-top: 55px;
+    margin-bottom: $standardVerticalMarginMobile;
+  }
+}
+
+.requestEndorseModalFees {
+  position: absolute;
+  right: $standardVerticalMarginDesktop;
+  top: 160px;
+
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    top: auto;
+    bottom: 76px;
+    right: 0;
+  }
+}
+
+
+.requestEndorseModal {
+  width: 70%;
+  display: grid;
+  grid-row-gap: 15px !important;
+  margin-top: 10px ;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: -10px ;
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    grid-row-gap: $thinVerticalMarginMobile;
+  }
+
+  .endorseNumber {
+    height: 26px;
+    width: 37px;
+    font-size: 18px;
+    background:  #E4456C;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    margin-right: 12px;
+  }
+
+  .requestEndorseRows {
+    grid-row-gap: 10px;
+    @media (max-width: $maxMobileWidth) {
+      grid-template-columns: 1fr !important;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      span {
+        margin-right: 4px;
+        font-weight: 400 !important;
+        color: #4b4b4b !important;
+        font-size: 24px !important;
+      }
+    }
+
+  }
+  :global(.ant-form-item) {
+    margin-bottom: 0 !important;
+  }
+
+  .corners {
+    span {
+      font-size: 18px;
+      line-height: 30px;
+
+    }
+    :global(.ant-form-item-control) {
+      align-self: center;
+    }
+  }
+  .endorseAcceptCorners {
+    grid-template-columns: 1fr !important;
+    grid-row-gap: 20px !important;
+  }
+
+  &_button {
+    min-height: 120px;
+    button {
+      height: max-content;
+      margin-left: auto;
+      position: absolute;
+      right: 30px;
+      top: 105px;
+      @media (max-width: $maxMobileWidth) {
+        top: auto;
+        right: 18px;
+        width: auto;
+        left: 18px;
+        bottom: 20px;
+      }
+    }
+  }
+
+  button {
+    height: max-content;
+    margin-left: auto;
+    position: absolute;
+    right: 30px;
+    top: 105px;
+    @media (max-width: $maxMobileWidth) {
+      top: auto;
+      right: 18px;
+      width: auto;
+      left: 18px;
+      bottom: 20px;
+    }
+  }
+
+}
+
+.saleFormIcon {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+  grid-column-gap: $extraThinVerticalMarginMobile;
+font-size: 24px;
+  &_tonWrap {
+    margin-right: 4px !important;
+    margin-top: 3px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 0;
+    }
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    margin-left: 0 !important;
+    padding-top: 5px;
+  }
+}
+
+.formWrap {
+  display: grid;
+  grid-template-areas:
+    'form btn'
+    'form fees';
+  grid-template-columns: 5fr 2fr;
+  grid-row-gap: $extraThinVerticalMarginDesktop;
+  grid-column-gap: $extraThinVerticalMarginDesktop;
+  align-items: start;
+
+  button {
+    grid-area: btn;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-areas:
+      'form'
+      'fees'
+      'btn';
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+}
+
+.arrow {
+  path {
+    fill: $primaryPinkColor;
+  }
+}
+
+.formMobileWrap {
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.price {
+  //width: 150px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin: 0 !important;
+
+    & {
+      :global(.ant-form-item-control),
+      :global(.ant-form-item-control-input) {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.makeBidForm {
+  grid-column-gap: 82px;
+}
+
+.setUpAuctionForm {
+  grid-column-gap: 45px;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-column-gap: 15px;
+  }
+}
+
+.sealID{
+  display: flex;
+  flex-direction: row;
+
+}
+.copy {
+  cursor: pointer;
+  transition: opacity 0.2s;
+  @media (max-width: $maxMobileWidth) {
+    align-self: center;
+  }
+  &:hover {
+    opacity: 0.5;
+
+  }
+}
+.linkIcon {
+  cursor: pointer;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.5;
+
+  }
+}
+.delete {
+  cursor: pointer;
+  margin: 0 20px;
+  transition: opacity 0.2s;
+  @media (max-width: $maxMobileWidth) {
+    margin-left: 10px;
+    margin-right: 15px;
+    align-self: center;
+  }
+  &:hover {
+    opacity: 0.5;
+
+  }
+}
+
+.feesModal {
+  grid-area: fees;
+  grid-template-columns: 1fr !important;
+  grid-row-gap: $extraThinVerticalMarginDesktop;
+
+  &__label {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr 4fr;
+
+    &__value {
+      & > div > div > span {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.saleFees {
+
+  &__label {
+    display: grid;
+    align-items: center;
+  }
+
+  :global(.TextList_textList__items__3iFel) {
+    flex-direction: column-reverse;
+  }
+  &__value {
+    @media (max-width: $maxMobileWidth) {
+      margin-left: 0;
+
+      & > div > div > span {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.createAction {
+  width: 245px;
+  margin-left: auto;
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    bottom: -115px;
+    width: 100%;
+    margin-right: auto;
+    max-width: unset;
+    min-width: unset;
+  }
+
+}
+
+.createAsk {
+  width: 245px;
+  margin-left: auto;
+  @media (max-width: $maxMobileWidth) {
+    position: relative;
+    bottom: -115px;
+    width: 100%;
+    margin-right: auto;
+    max-width: unset;
+    min-width: unset;
+  }
+
+}
+.makeBid {
+  width: 245px;
+  margin-left: auto;
+  margin-bottom: 66px;
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 0;
+    position: relative;
+    bottom: -83px;
+    width: 100%;
+    margin-right: auto;
+    max-width: unset;
+    min-width: unset;
+  }
+}
+.submitBid {
+  width: 245px;
+  margin-left: auto;
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 85px;
+    position: relative;
+    bottom: -75px;
+    width: 100%;
+    margin-right: auto;
+    max-width: unset;
+    min-width: unset;
+  }
+}
+
+.addForever {
+  .addForeverPr {
+    width: 70% !important;
+    @media (max-width: $maxMobileWidth) {
+      width: 100% !important;
+
+    }
+  }
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: 160px;
+
+    flex-direction: column;
+  }
+}
+
+.mobileSend {
+
+  @media (max-width: $maxMobileWidth) {
+    position: absolute;
+    bottom: 40px;
+    left: 18px;
+    right: 18px;
+    width: auto;;
+  }
+}
+.feesForever {
+  @media (max-width: $maxMobileWidth) {
+    position: absolute;
+    bottom: 110px;
+    left: 18px;
+    right: 18px;
+    width: auto;;
+  }
+}

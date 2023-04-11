@@ -1,0 +1,336 @@
+@import '../../../../styles/palette.scss';
+.userInfoWithoutHash {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.userInfoWrapper {
+  position: relative;
+
+  &_wallpaperWrapper {
+   height: 300px;
+   width: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+      @media(max-width: $maxMobileWidth) {
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        margin-left: -5.3%;
+      }
+    }
+    @media(max-width: $maxMobileWidth) {
+      height: 200px;
+    }
+  }
+}
+
+.userPhotoMobile {
+
+  @media(max-width: $maxMobileWidth) {
+    object-fit: cover;
+    box-sizing: content-box;
+    padding: 10px;
+    background: white;
+    height: 290px;
+    width: 290px;
+  }
+}
+.filterWrap {
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0px;
+
+    margin-bottom: 25px;
+  }
+}
+
+//old
+.coverImage {
+  object-fit: cover;
+
+}
+.imageMaskWrapper {
+  position: relative;
+  bottom: 80px;
+  left: -10px;
+  @media(max-width: $maxMobileWidth) {
+    bottom: 50px;
+  }
+}
+
+.imageMask {
+  display: inline-block;
+  background: #fff;
+  padding: 20px 20px 0;
+  margin-left: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-left: 0;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  &_imposition {
+    margin-top: -130px;
+    @media (max-width: $maxMobileWidth) {
+      margin-top: -90px
+    }
+  }
+}
+
+.userInfoBlock {
+  float: left;
+  display: inline-block;
+}
+
+.settingButton {
+  position: absolute;
+  right: 0;
+  //bottom: 46px;
+  display: inline-block;
+}
+.createButtonMob {
+  margin-top: 20px;
+}
+.settingsButtonWithoutPhotoHash {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  display: inline-block;
+  margin-top: 50px;
+}
+.userRowWrapperMobile {
+  @media (max-width: $maxMobileWidth) {
+    border-bottom: 2px solid #E4456C;
+    width: 100%;
+  }
+}
+
+.collectionsWrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 50px -50vw 75px;
+  background: $lightBlueColor;
+  padding: 30px 6.1% 75px;
+
+  &_titleRow {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    max-width: 1306px;
+    margin: 0 auto;
+
+
+    @media (max-width: $maxMobileWidth) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_link {
+      display: grid;
+      align-items: center;
+    }
+  }
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.userProfile {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid $primaryPinkColor;
+  padding-bottom: 24px;
+
+  &__about {
+    padding: 75px 0 0 50px;
+    word-break: break-word;
+    @media (max-width: $maxMobileWidth) {
+      padding: $smallVerticalMarginMobile 0 0 66px;
+    }
+  }
+  &__more{
+    font-weight: 300;
+    color: $normalTextColor;
+  }
+
+  &__text {
+    color: $primaryGreyColor;
+    font-size: $primaryFontSizeDesktop;
+    font-weight: 300;
+    @media (max-width: $maxMobileWidth) {
+      font-style: normal;
+      font-weight: 300;
+      font-size: $primaryFontSizeMobile;
+      line-height: 16px;
+      color: $primaryGreyColor;
+      max-height: 70px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__descriptionHide {
+    display: block;
+    height: 45px;
+    overflow: hidden;
+    &::before {
+      fill: $textHintColor;
+      transition: all 0.5s;
+      content: url('/icons/filterArrowDown.svg');
+      display: block;
+      position: absolute;
+      left: 44px;
+    }
+  }
+  &__descriptionShow {
+    max-height: max-content;
+    height: max-content;
+    &::before {
+      fill: $textHintColor;
+      content: url('/icons/filterArrowDown.svg');
+      transform: rotate(90deg);
+      display: block;
+      transition: all 0.5s;
+      position: absolute;
+      left: 44px;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+}
+.paginationSection {
+  margin-top: $standardVerticalMarginDesktop;
+  margin-left: auto;
+  width: max-content;
+
+}
+.paginationWrap {
+  max-width: 1306px;
+  margin: 0 auto  ;
+}
+
+.userInfo {
+  margin-top: 24px;
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 0;
+  }
+}
+
+.userRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: -36px;
+  padding-bottom: $smallVerticalMarginDesktop;
+
+  &_settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: $smallVerticalMarginDesktop;
+  }
+
+}
+
+.createTokenButton {
+  align-self: flex-end;
+  margin-top: 28px;
+}
+
+.categoryTitleWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    margin-left: 30px;
+  }
+
+  //background color for active status theme switcher
+  :global(.ant-switch-checked) {
+    background-color: $backgroundPinkColor !important;
+  }
+
+  .refreshButton {
+    cursor: pointer;
+    margin-left: 25px;
+    margin-bottom: 4px;
+    color: $textHintColor;
+    @media (max-width: $maxMobileWidth) {
+      img {
+        height: 23px;
+        width: 23px;
+      }
+      margin-left: 15px;
+    }
+    &:hover {
+      transition: filter 0.2s;
+      filter: opacity(0.7);
+    }
+  }
+  &__links {
+    margin-left: 15px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-left: -10px;
+    }
+    & > * {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.linkWrap {
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.link {
+  border-bottom: 2px solid $primaryPinkColor;
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-end;
+  transition: opacity 0.2s;
+
+  &__active {
+    background-color: $backgroundDarkColor;
+    border: none;
+    padding: 5px 10px;
+    color: $textWhiteColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,10 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokenImage {
+  position: relative;
+  z-index: 1;
+}

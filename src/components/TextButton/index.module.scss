@@ -1,0 +1,15 @@
+@import '../../styles/palette.scss';
+.button {
+  font-size: $secondaryFontSizeDesktop;
+  font-weight: 300;
+  color: $primaryPinkColor;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: opacity(0.7);
+  }
+}

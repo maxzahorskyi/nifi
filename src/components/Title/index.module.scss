@@ -1,0 +1,13 @@
+@import '../../styles/palette.scss';
+
+.title {
+  font-size: $headerFontSizeDesktop;
+  font-weight: $primaryFontWeight;
+  color: $textDarkColor;
+  text-transform: uppercase;
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: $headerFontSizeMobile;
+    line-height: 24px;
+  }
+}

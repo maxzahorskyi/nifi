@@ -1,0 +1,228 @@
+@import '../../../../styles/palette.scss';
+
+.mainWrapper {
+  width: 40%;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hoverContainer {
+  width: 100%;
+  z-index: 1;
+  padding: 25px 25px 35px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  transition: opacity 0.3s;
+  opacity: 0;
+  color: $textWhiteColor;
+  background-color: hsla(0, 0%, 90.6%, 0.9);
+
+  @media (min-width: 1300px) {
+    width: 506px;
+    height: 506px;
+  }
+
+  @media (max-width: 1300px) {
+    width: 450px;
+    height: 450px;
+  }
+
+  @media (max-width: 1150px) {
+    width: 430px;
+    height: 430px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 410px;
+    height: 410px;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    width: 338px;
+    height: 338px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cardHeaderWrap {
+  margin-top: $standardVerticalMarginDesktop;
+
+  @media (max-width: $maxMobileWidth) {
+    margin: $extraThinVerticalMarginMobile 0;
+  }
+}
+
+.cardTitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: $cardTitleFontSize;
+  line-height: 28px;
+  margin-bottom: 24px;
+  color: #000000;
+
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cardDescription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $primaryFontSizeDesktop;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 20px;
+
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cardEdition {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $secondaryFontSizeDesktop;
+  line-height: 16px;
+  color: #636262;
+  margin-bottom: 50px;
+  @media (max-width: $maxMobileWidth) {
+    margin-bottom: $standardVerticalMarginMobile;
+  }
+}
+
+.timeTagWrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.container {
+  //width: 100%;
+  cursor: pointer;
+  max-width: 511px;
+  height: auto;
+  position: relative;
+  @media (min-width: 1300px) {
+    width: 506px;
+    height: 506px;
+  }
+
+  @media (max-width: 1300px) {
+    width: 450px;
+    height: 450px;
+  }
+
+  @media (max-width: 1150px) {
+    width: 430px;
+    height: 430px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 410px;
+    height: 410px;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    width: 338px;
+    height: 338px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover > .shadow > .title {
+    display: none;
+  }
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(23, 23, 23, 0.8) 0%,
+    rgba(41, 41, 41, 0.184) 71.87%,
+    rgba(196, 196, 196, 0) 100%
+  );
+}
+
+.title {
+  transition: all 0.3s;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 17px;
+  padding: 0 26px;
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.userInfo {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: $secondaryFontSizeDesktop;
+    line-height: 21px;
+    color: $textWhiteColor;
+    cursor: pointer;
+
+    img {
+      object-fit: cover;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  &__authorname {
+    padding-left: 10px;
+    @media (max-width: $maxMobileWidth) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.linkButton {
+  background: $deepBlueColor;
+  border: 1px solid $textWhiteColor;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  margin: auto 0;
+  color: $textWhiteColor;
+  padding: 5px 10px;
+  max-height: 32px;
+  text-transform: uppercase;
+}

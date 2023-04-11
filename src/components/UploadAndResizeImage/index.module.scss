@@ -1,0 +1,80 @@
+@import '../../styles/palette.scss';
+
+.Wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr;
+  }
+
+  .ImageWrapper {
+    display: flex;
+    justify-content: center;
+    background: hsla(0,0%,75%,.2);
+    border-radius: 4px;
+
+    .Image {
+      min-height: 100px;
+      max-height: 400px;
+
+      @media (max-width: $maxMobileWidth) {
+        min-height: 150px;
+      }
+    }
+  }
+
+  .ControlsWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background: hsla(0,0%,75%,.2);
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    span {
+      margin-bottom: 20px;
+    }
+
+    .CanvasWrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .Canvas {
+        max-width: 200px;
+        max-height: 200px;
+        min-width: 200px;
+        min-height: 200px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .CropControls {
+      width: 100%;
+
+      .Text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.Button {
+  display: flex;
+  align-self: end;
+}
+
+.Text {
+  font-weight: 300;
+}

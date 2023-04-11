@@ -1,0 +1,13 @@
+@import '../../styles/palette.scss';
+
+.input {
+  //font-size: $primaryFontSizeDesktop !important;
+  color: #4b4b4b !important;
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+
+  &::placeholder {
+    font-size: 18px !important;
+  }
+}

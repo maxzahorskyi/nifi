@@ -1,0 +1,287 @@
+@import '../../styles/palette.scss';
+
+.wallets {
+  display: grid !important;
+  padding-left: 18px;
+  @media (max-width: $maxMobileWidth) {
+    padding-left: 0;
+  }
+}
+
+.addWallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  background: $deepBlueColor;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-left: 20px;
+
+  svg {
+    fill: $textWhiteColor;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    color: lighten($textWhiteColor, 10%);
+    transition: 0.5s;
+
+    svg {
+      opacity: 0.9;
+      fill: lighten($textWhiteColor, 10%);
+    }
+  }
+}
+
+
+.TSLabelChild {
+  margin-top: $thinVerticalMarginDesktop;
+  span:first-of-type {
+    display: block;
+    margin-right: 4px;
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    margin-left: $bodyHorizontalMarginMobile;
+  }
+}
+
+.TSColumnChild {
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F7;
+  border-radius: 4px;
+  margin-right: 40px;
+  padding: 10px 0 20px;
+
+
+  @media (max-width: $maxMobileWidth) {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  :global(.ant-radio-group) {
+    grid-template-columns: 1fr !important;
+
+    @media (max-width: $maxMobileWidth) {
+      grid-template-columns: 1fr !important;
+      grid-row-gap: 0 !important;
+    }
+  }
+}
+.sfWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 53px;
+}
+
+.walletName {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: #F5F5F7;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  border-radius: 4px;
+  @media (max-width: $maxMobileWidth) {
+    margin-right: 0;
+  }
+
+  > span:nth-child(2) {
+    width: 100%;
+
+    span {
+      color: $textHintColor;
+      font-size: $secondaryFontSizeDesktop;
+    }
+  }
+}
+.walletRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.walletsModal {
+  display: flex !important;
+  flex-direction: column;
+
+  .title {
+    font-size: $secondaryFontSizeDesktop;
+    color: $textHintColor;
+    font-weight: $primaryFontWeight;
+  }
+}
+
+
+.walletBody {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: start;
+
+  @media (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.TSlink {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  grid-column-gap: $thinVerticalMarginDesktop;
+  transition: 0.5s;
+  color: $primaryPinkColor;
+  cursor: pointer;
+
+  svg {
+    fill: $primaryPinkColor;
+  }
+
+  &:hover {
+    color: lighten($primaryPinkColor, 10%);
+    transition: 0.5s;
+
+    svg {
+      fill: lighten($primaryPinkColor, 10%);
+    }
+  }
+}
+
+.walletIcon {
+  box-sizing: border-box;
+  color: white;
+  background: $deepBlueColor;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0 6px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 400;
+  line-height: 32px;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px !important;
+
+  .networkErrorCircle {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    background: $primaryPinkColor ;
+    border-radius: 50%;
+  }
+  .notAuthenticated {
+    background: #FFC83A !important ;
+  }
+
+  //@media (max-width: $maxMobileWidth) {
+  //  height: 25px;
+  //  min-width: 25px;
+  //  padding: 0 4px;
+  //  line-height: 25px;
+  //}
+
+  &:hover {
+    transition: filter 0.2s;
+    filter: opacity(0.7);
+  }
+
+}
+
+.surfFull {
+  margin-left: calc(-1 * (#{$smallVerticalMarginMobile}/ 2));
+
+  @media (max-width: $minDesktopWidth) {
+    margin-top:5px;
+  }
+}
+
+.TSLabel {
+  span:first-of-type {
+    display: none;
+  }
+  &:last-child {
+    align-self: flex-end;
+
+    > span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.tabs {
+  margin-bottom: 10px;
+  &__item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    color: $tableLinesColor;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px !important;
+
+    @media (max-width: $maxMobileWidth) {
+      font-size: 18px;
+    }
+
+    svg {
+      width: 31px;
+      height: 31px;
+      transition: 0.3s;
+
+      @media (max-width: $maxMobileWidth) {
+        width: 25px;
+        height: 25px;
+        margin-right: -5px;
+      }
+
+      path {
+        transition: 0.3s;
+        fill: $tableLinesColor;
+      }
+    }
+
+    &:hover {
+      color: $deepBlueColor !important;
+      svg {
+        path {
+          fill: $deepBlueColor;
+        }
+      }
+    }
+
+    &:hover:after{
+      color: #000 !important;
+      border-bottom: 4px solid #0e1e3a !important;
+    }
+
+    &::after {
+      border-bottom: 4px solid transparent !important;
+    }
+  }
+
+  &__active {
+    span {
+      color: $deepBlueColor;
+    }
+
+    svg {
+      path {
+        fill: $deepBlueColor;
+      }
+    }
+
+    &::after {
+      border-bottom: 4px solid #0e1e3a !important;
+    }
+  }
+}

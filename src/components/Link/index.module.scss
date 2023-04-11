@@ -1,0 +1,21 @@
+@import '../../styles/palette.scss';
+.link {
+  border-bottom: 2px solid $primaryPinkColor;
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-end;
+  transition: opacity 0.2s;
+
+  &__active {
+    background-color: $backgroundDarkColor;
+    border: none;
+    padding: 5px 10px;
+    color: $textWhiteColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

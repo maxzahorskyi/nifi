@@ -1,0 +1,123 @@
+{
+  "FileInput": {
+    "Browse": "Browse"
+  },
+  "MediaPreview": {
+    "Subtitle": "subtitle",
+    "Rarity": "rarity",
+    "StampSubtitle": "Image subtitle",
+    "FrameSubtitle": "Frame subtitle"
+  },
+  "TokenCreationPage": {
+    "TokenCreation": "TOKEN CREATION",
+    "Title": "Title",
+    "Creator": "Creator",
+    "NumberOfEditions": "Number of editions",
+    "CreatorsLifetimeFee": "Creator’s lifetime fee",
+    "Description": "Description",
+    "Details": "Details",
+    "CreationFee": "Creation fee",
+    "AddMedia": "add media",
+    "CreateToken": "Create token",
+    "MediaFiles": "Media Files"
+  },
+  "Header": {
+    "Drops": "Drops",
+    "Gallery": "Gallery",
+    "Activity": "Activity",
+    "Collections": "Collections",
+    "RegisterViaExtraton": "Register via Extraton",
+    "Home": "Home",
+    "AccountSettings": "Account settings",
+    "TermsOfService": "Terms of service",
+    "Language": "Language",
+    "PrivacyPolicy": "Privacy policy"
+  },
+  "Footer": {
+    "Company": "Company",
+    "About": "About",
+    "WhatIsNFT": "What is NFT?",
+    "WhatIsEverscale": "What is Everscale?",
+    "MissionAndTeam": "Mission and Team",
+    "Nifipedia": "Nifipedia",
+    "Promo": "Promo",
+    "OurBlog": "Our Blog",
+    "TermsOfService": "Terms of Service",
+    "Help": "Help",
+    "SellYourWork": "Sell your Work",
+    "FAQ": "FAQ",
+    "Support": "Support",
+    "PrivacyPolicy": "Privacy Policy",
+    "YourTokens": "Your Tokens",
+    "QuickStart": "Quick start"
+  },
+  "Navigation": {
+    "AccountSettings": "Account settings",
+    "PaymentSettings": "Payment settings",
+    "CreateYourToken": "Create your token"
+  },
+  "AccountSettings": {
+    "Title": "ACCOUNT SETTINGS",
+    "Nickname": "Nickname",
+    "Account": "Account",
+    "RegisteredVia": "Registered via",
+    "Update": "Update",
+    "AssociatedWallet": "Associated wallet"
+  },
+  "AccountCreate": {
+    "Title": "ACCOUNT CREATION"
+  },
+  "PaymentSettings": {
+    "Title": "PAYMENT SETTINGS",
+    "LearnMore": "Learn more",
+    "About": " about available payment options",
+    "RegisteredVia": "Registered via",
+    "Update": "Update",
+    "PayPal": "PayPal",
+    "ConnectPayPal": "Connect a PayPal account",
+    "Hint": "* Allow up to two weeks to receive payments through PayPal",
+    "DigitalWallet": "Digital Wallet",
+    "ConnectCoinbase": "Connect coinbase",
+    "AssociatedWallet": "Associated wallet"
+  },
+  "OnSalePage": {
+    "CreateToken": "Create your token",
+    "FilterAll": "ALL",
+    "FilterOnSale": "ON SALE",
+    "FilterLiveBids": "LIVE BIDS",
+    "OnSaleTitle": "ON SALE",
+    "SoldTitle": "SOLD",
+    "ViewAll": "view all",
+    "Tokens": "TOKENS"
+  },
+  "UserInfo": {
+    "Views": "views",
+    "Sales": "sales"
+  },
+  "TokenPage": {
+    "Activities": "Activities",
+    "TokenStatus": {
+     "OnDrop": "On drop"
+    },
+    "CurrentOffers": "current bids",
+    "CurrentBid": "current bid",
+    "TimeLeft": "time left"
+  },
+  "ActivityPage": {
+    "AllActivities": "All activities",
+    "Activity": "Activity",
+    "Token": "Token",
+    "Edition": "Edition",
+    "Price": "Price",
+    "From": "From",
+    "To": "To",
+    "Date": "Date"
+  },
+  "TokensPage": {
+    "All": "All",
+    "Collectors": "Collectors",
+    "Creators": "Creators",
+    "OnSale": "On sale",
+    "LiveBids": "Live bids"
+  }
+}

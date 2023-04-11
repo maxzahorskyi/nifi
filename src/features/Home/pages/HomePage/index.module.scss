@@ -1,0 +1,120 @@
+@import url('http://fonts.cdnfonts.com/css/digital-numbers');
+@import '../../../../styles/palette.scss';
+
+.container {
+  width: 100%;
+}
+
+.firstSection {
+
+  .sliderSection {
+
+  }
+
+  .smallBannersSection {
+    display: flex;
+    grid-column-gap: 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    align-items: flex-end;
+    margin-top: 25px;
+    justify-content: space-between;
+  }
+
+}
+
+.createButtonSection {
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+  }
+}
+
+.createButtonWrapper {
+  display: flex;
+  background-image: url('/images/HomePage/createTokenBG.png') ;
+
+  @media (max-width: $maxMobileWidth) {
+    background-image: url('/images/HomePage/createTokenBGMobile.png') ;
+    background-size: cover;
+  }
+  background-repeat:repeat;
+  height: 186px;
+
+  .createYourTokenButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url('/images/HomePage/createLineBG.png') ;
+    background-repeat:repeat;
+    margin: auto auto;
+    .createTokenButton {
+      margin: auto auto;
+      background: #D5617D;
+      font-weight: normal;
+      font-size: $primaryFontSizeDesktop;
+      height: 47px;
+      color: white;
+      line-height: 21px;
+      text-align: center;
+
+      @media (max-width: $maxMobileWidth) {
+        margin: auto 18px;
+        max-width: 355px;
+        min-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.deepBg {
+  width: 100vw;
+  padding: 0 5.8% 11px;
+  background: $deepBlueColor;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  @media (max-width: $maxMobileWidth) {
+    padding: 0 5.8%;
+
+  }
+}
+
+.tradingSection {
+  padding-top: 20px !important;
+
+  @media (max-width: $maxMobileWidth) {
+    padding-bottom: 0;
+    margin-bottom: 35px;
+  }
+}
+.topsSection {
+  padding-top: 25px !important;
+
+  @media (max-width: $maxMobileWidth) {
+    padding-top: 22px !important;
+    padding-bottom: 0;
+  }
+}
+
+.mainWrapper {
+  width: 44%;
+  position: relative;
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100%
+  }
+}

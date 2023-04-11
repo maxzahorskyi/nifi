@@ -1,0 +1,93 @@
+@import '../../styles/palette.scss';
+.wrap {
+  font-size: $secondaryFontSizeDesktop;
+  background-color: $deepBlueColor;
+  width: 100% !important;
+}
+
+.content {
+  max-width: 1306px;
+  padding: 40px 0 40px;
+  margin:  0 auto;
+  @media (max-width: $maxMobileWidth) {
+    padding: 40px 0 66px;
+
+  }
+}
+
+.bg {
+  margin-top: 150px;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 100px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column-reverse;
+  }
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: $maxMobileWidth) {
+    margin-top: 75px;
+    margin-left: 0;
+  }
+  &__text {
+    color: $textHintColor;
+    padding-top: 30px;
+
+    @media (max-width: $maxMobileWidth) {
+      padding-top: 14px;
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  margin-right: calc(150px - 5%);
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .titleWhite {
+    color: $textWhiteColor !important;
+  }
+  .hintText {
+    a {
+
+    color: $textHintColor !important;
+    }
+  }
+
+  &__column {
+    margin-right: 150px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-right: 100px;
+      margin-bottom: 45px;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.link {
+  &_important {
+    a {
+      color: $primaryPinkColor !important;
+    }
+  }
+}

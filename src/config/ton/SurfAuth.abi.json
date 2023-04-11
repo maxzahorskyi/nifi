@@ -1,0 +1,293 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "setIcon",
+			"inputs": [
+				{"name":"icon","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setABIBytes",
+			"inputs": [
+				{"name":"dabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAuthMsg",
+			"inputs": [
+				{"name":"returnUrl","type":"string"}
+			],
+			"outputs": [
+				{"name":"message","type":"cell"}
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "auth",
+			"inputs": [
+				{"name":"returnUrl","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPostUserSign",
+			"inputs": [
+				{"name":"handle","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPostUserAddress",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPostPubkey",
+			"inputs": [
+				{"name":"value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "printError",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDataToSign",
+			"inputs": [
+				{"name":"statusCode","type":"int32"},
+				{"name":"retHeaders","type":"string[]"},
+				{"name":"content","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDataToSignJson",
+			"inputs": [
+				{"name":"result","type":"bool"},
+				{"components":[{"name":"success","type":"bool"},{"name":"data","type":"bytes"}],"name":"obj","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "decodeBase64",
+			"inputs": [
+				{"name":"data","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setSignature",
+			"inputs": [
+				{"name":"signature","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setEncode",
+			"inputs": [
+				{"name":"hexstr","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPostResponse",
+			"inputs": [
+				{"name":"statusCode","type":"int32"},
+				{"name":"retHeaders","type":"string[]"},
+				{"name":"content","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDataToMoveJson",
+			"inputs": [
+				{"name":"result","type":"bool"},
+				{"components":[{"name":"success","type":"bool"},{"name":"data","type":"bytes"}],"name":"obj","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPayMsg",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"recipient","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+				{"name":"message","type":"cell"}
+			]
+		},
+		{
+			"name": "pay",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"recipient","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPayUserSign",
+			"inputs": [
+				{"name":"handle","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPayUserAddress",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "signPay",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "confirmPay",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "payError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "paySuccess",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"version","type":"string"},
+				{"name":"publisher","type":"string"},
+				{"name":"caption","type":"string"},
+				{"name":"author","type":"string"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"string"},
+				{"name":"language","type":"string"},
+				{"name":"dabi","type":"string"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"state","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"string"},
+				{"name":"targetAbi","type":"string"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"m_options","type":"uint8"},
+		{"name":"m_debotAbi","type":"optional(string)"},
+		{"name":"m_targetAbi","type":"optional(string)"},
+		{"name":"m_target","type":"optional(address)"},
+		{"name":"m_pk","type":"uint256"},
+		{"name":"m_sign","type":"uint32"},
+		{"name":"m_dst","type":"address"},
+		{"name":"m_returnUrl","type":"string"},
+		{"name":"m_icon","type":"bytes"},
+		{"name":"m_sendMsg","type":"cell"},
+		{"name":"m_amount","type":"uint128"},
+		{"name":"m_payload","type":"cell"},
+		{"name":"m_sender","type":"address"}
+	]
+}

@@ -1,0 +1,72 @@
+@import '../styles/palette.scss';
+
+.buttonSpinner {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.3s, opacity 0.3s !important;
+  width: 30px;
+  opacity: 1 !important;
+
+  .ant-spin-dot-item {
+    background-color: #fff;
+  }
+
+  &_hidden {
+    width: 0;
+    opacity: 0 !important;
+  }
+}
+
+.skeletonInput {
+  border-radius: 4px !important;
+
+  .ant-skeleton {
+    &, .ant-skeleton-input {
+      width: 100%;
+    }
+  }
+}
+
+.ant-input-borderless, .ant-picker-borderless {
+  padding: 0 !important;
+}
+
+.search::placeholder {
+  color: rgba($color: $textDarkColor, $alpha: 1.0) !important;
+}
+
+.search {
+  width: 500px !important;
+  border-radius: 15px !important;
+  margin-top: $enlargedVerticalMarginDesktop;
+
+  .ant-input {
+    touch-action: pinch-zoom;
+    font-size: 16px !important;
+  }
+
+  .ant-input-prefix {
+    margin-top: 4px;
+    background-image: url("/icons/SearchIcon.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    svg {
+      display: none;
+    }
+  }
+
+  @media (max-width: $maxMobileWidth) {
+    width: 100% !important;
+
+    .ant-input {
+      font-size: 16px !important;
+    }
+    .ant-input-prefix {
+      margin-bottom: 2px;
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+@import '../../../../../styles/palette.scss';
+
+.categoryContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: $primaryPinkColor;
+  transition: opacity 0.2s;
+  border-bottom: 1px solid;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  &__label {
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    width: 40%;
+    margin-bottom: 5px;
+  }
+}

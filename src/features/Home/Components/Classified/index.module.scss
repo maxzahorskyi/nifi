@@ -1,0 +1,17 @@
+@import '../../../../styles/palette.scss';
+
+.smallBannersSection {
+  display: flex;
+  grid-column-gap: 16px;
+  grid-row-gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-end;
+  margin-top: 25px;
+  justify-content: space-between;
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+  }
+}

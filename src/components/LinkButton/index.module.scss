@@ -1,0 +1,31 @@
+@import '../../styles/palette.scss';
+.button {
+  font-size: $primaryFontSizeDesktop;
+  font-weight: 400;
+  border: none;
+  line-height: 25px;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  color: $normalTextColor;
+  cursor: pointer;
+
+  > a {
+    color: $normalTextColor;
+  }
+
+  &:hover {
+    transition: border 0.2s;
+    border-bottom: 2px solid $primaryPinkColor;
+  }
+
+  &_active {
+    border-bottom: 2px solid $primaryPinkColor;
+  }
+
+
+  @media (max-width: $maxMobileWidth) {
+    font-size: 16px;
+  }
+}
+
+

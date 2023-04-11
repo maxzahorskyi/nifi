@@ -1,0 +1,63 @@
+@import '../../styles/palette.scss';
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $maxMobileWidth) {
+    justify-content: flex-end;
+  }
+
+  &__input {
+    margin-right: 30px;
+    @media (max-width: $maxMobileWidth) {
+      display: none;
+    }
+  }
+}
+
+.inputWrapTokenPageCreate {
+  @media (max-width: $maxMobileWidth) {
+    justify-content: flex-start;
+  }
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.plusCircleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  background: $deepBlueColor;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  svg {
+    fill: $textWhiteColor;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    color: lighten($textWhiteColor, 10%);
+    transition: 0.5s;
+
+    svg {
+      opacity: 0.9;
+      fill: lighten($textWhiteColor, 10%);
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../../../../styles/palette.scss';
+
+.categoryContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__avatar {
+    margin-right: 35px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__formWrap {
+    width: 100%;
+    padding-top: 50px;
+
+    @media (max-width: 500px) {
+      padding-top: 0;
+    }
+  }
+
+  &__fileInputWrap {
+    margin-bottom: 40px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-left: 20px;
+      margin-bottom: 0;
+      display: flex;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &_create_collection {
+      margin-left: auto;
+      @media (max-width: $maxMobileWidth) {
+        margin-top: -50px;
+      }
+    }
+
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 40px;
+    }
+  }
+
+  &__imageUpload {
+    //margin-top: 70px;
+    margin-top: 150px;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 0;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    flex-direction: column;
+  }
+}
+
+.hint {
+  color: $textHintColor;
+}
+.icon {
+  margin-right: 8px;
+}
+.buttonWrap {
+  width: 100%;
+  margin-top: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+}
+.mediaInput {
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+}
+
+.inputWrap {
+  padding: 0;
+  margin-bottom: 0 !important;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+}
+
+.fileInputWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+}

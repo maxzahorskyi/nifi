@@ -1,0 +1,8 @@
+@import '../../styles/palette.scss';
+
+.input {
+  font-size: $primaryFontSizeDesktop;
+  @media (max-width: $maxMobileWidth) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../styles/palette.scss';
+.cancelMenu {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+  background: $primaryPinkColor;
+  padding: 5px 27px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__closeIcon {
+    position: absolute;
+    right: 10px;
+  }
+  &__item {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+  background: $backgroundLightColor;
+  border: 1px solid $lightGreyColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .menu {
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 2%;
+    justify-content: center;
+    padding: 5px 18px;
+    width: 100%;
+    .menuItem {
+      cursor: pointer;
+      min-width: 112px;
+      flex: 1;
+      background: $backgroundDarkColor;
+      border-radius: 5px;
+      padding: 5px 8px;
+      display: flex;
+      flex-direction: row;
+
+      .text {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $lightGreyColor;
+        width: 70%;
+      }
+      img {
+        min-width: 27px;
+        min-height: 27px;
+        margin-right: 10px;
+        position: relative;
+        bottom: 1.5px;
+      }
+    }
+  }
+}

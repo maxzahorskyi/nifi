@@ -1,0 +1,532 @@
+@import '../../../../../styles/palette.scss';
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+.imgD {
+  max-height: 100%;
+  max-width: 100%;
+}
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cardHeader {
+  //background: red;
+  //opacity: 0.5;
+}
+
+// TODO : //////////////////////////////////////////////////////////////////////////////////////////
+.cardWrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &__image {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      min-height: 170px;
+    }
+
+    :global .ant-skeleton-element {
+      height: 100% !important;
+      width: 100%;
+      @media (max-width: $maxMobileWidth) {
+        width: 100%;
+      }
+    }
+
+    :global .ant-skeleton-image {
+      width: 100%;
+      min-height: 170px;
+      @media (max-width: $maxMobileWidth) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_actionText {
+    @media (max-width: $maxMobileWidth) {
+      font-weight: normal;
+      font-size: $entriesFontSizeMobile;
+      line-height: 21px;
+      text-align: right;
+      width: max-content;
+      color: #6bbf00;
+
+      margin-bottom: 10px;
+    }
+  }
+
+  &_currentBidTextWrap {
+    @media (max-width: $maxMobileWidth) {
+      display: flex;
+      justify-content: space-between;
+      grid-column-gap: 25px;
+      width: max-content;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: $primaryGreyColor;
+      margin-bottom: 25px;
+    }
+  }
+
+  &_description {
+    @media (max-width: $maxMobileWidth) {
+      font-style: normal;
+      font-weight: 300;
+      font-size: $entriesFontSizeMobile;
+      line-height: 21px;
+      color: $textDarkColor;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_active {
+    padding: 18px $extraThinVerticalMarginDesktop
+      $smallVerticalMarginDesktop;
+    opacity: 0;
+    color: $textWhiteColor;
+    background-color: rgba(247, 247, 247, 0.9);
+    min-height: inherit;
+
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: flex-end;
+    //z-index: 1;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    //@media (max-width: $maxMobileWidth) {
+    //  padding: $smallVerticalMarginMobile $extraThinVerticalMarginMobile;
+    //}
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: $enlargedVerticalMarginDesktop;
+      color: $lightGreenColor;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $secondaryFontSizeDesktop;
+      font-weight: 400;
+      color: $primaryGreyColor;
+      padding-bottom: 30px;
+    }
+
+    &__cardName {
+      font-size: 24px;
+      line-height: 20px;
+      color: black;
+      font-weight: 300;
+      overflow-wrap: break-word;
+      word-break: break-word;
+
+      &__wrap {
+        margin-bottom: 25px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+
+        &__wrap {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__cardSubName {
+      font-size: $entriesFontSizeDesktop;
+      color: black;
+      font-weight: 400;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      &__wrap {
+        margin-bottom: 25px;
+
+        @media (max-width: 576px) {
+          margin-top: $largeVerticalMarginMobile;
+        }
+      }
+    }
+
+    &__edition {
+      font-size: 15px;
+      font-weight: 400;
+      color: $primaryGreyColor;
+      &__wrap {
+        margin-bottom: 25px;
+        min-height: 19px;
+
+        //@media (max-width: $maxMobileWidth) {
+        //  margin: $smallVerticalMarginDesktop 0;
+        //}
+      }
+    }
+  }
+
+  &_previewIcon {
+    position: absolute;
+    right: $smallVerticalMarginDesktop;
+    bottom: $smallVerticalMarginDesktop;
+    margin-top: auto;
+    cursor: pointer;
+  }
+
+  &:hover &_active {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.descriptionText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px 75px 18px 10px;
+  color: $primaryGreyColor;
+  line-height: 16.41px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.underBlockWrapper {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  a {
+    cursor: pointer;
+    &:hover {
+      filter: opacity(0.7);
+    }
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      margin-left: 10px;
+    }
+
+    > span:first-child {
+      a {
+        color: black;
+      }
+    }
+    > span:last-child {
+      color: #A3A3A3;
+      font-size: 13px;
+    }
+  }
+}
+// TODO : //////////////////////////////////////////////////////////////////////////////////////////
+
+.timeTagWrap {
+  position: absolute;
+  top: 18px;
+  left: $extraThinVerticalMarginDesktop;
+  z-index: 1;
+  cursor: pointer;
+
+  .onSaleShow {
+    color: $primaryGreyColor;
+    font-size: $parametersFontSizeDesktop;
+    padding: 0 6px;
+
+    svg {
+      path {
+        fill: $primaryGreyColor;
+      }
+    }
+  }
+
+  .onSale {
+    color: $textWhiteColor;
+    font-size: $parametersFontSizeDesktop;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 6px;
+
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.tonIconWrap path {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  fill: $primaryGreyColor;
+}
+
+.linkList {
+  font-size: $secondaryFontSizeDesktop !important;
+  font-weight: 400;
+}
+
+// new design
+
+.cardWrapper {
+  position: relative;
+  //width: 300px;
+  height: 376px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: $maxMobileWidth) {
+    min-height: 228px;
+  }
+
+  &:hover &_active {
+    opacity: 0.94;
+    cursor: pointer;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-position: center center;
+    }
+
+    :global .ant-skeleton-element {
+      height: 100% !important;
+      width: 100%;
+      @media (max-width: $maxMobileWidth) {
+        width: 100%;
+      }
+    }
+
+    :global .ant-skeleton-image {
+      width: 100%;
+      @media (max-width: $maxMobileWidth) {
+        width: 100%;
+      }
+    }
+  }
+  &_actionText {
+    @media (max-width: $maxMobileWidth) {
+      font-weight: normal;
+      font-size: $entriesFontSizeMobile;
+      line-height: 21px;
+      text-align: right;
+      width: max-content;
+      color: #6bbf00;
+
+      margin-bottom: 10px;
+    }
+  }
+  &_currentBidTextWrap {
+    @media (max-width: $maxMobileWidth) {
+      display: flex;
+      justify-content: space-between;
+      grid-column-gap: 25px;
+      width: max-content;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: $primaryGreyColor;
+      margin-bottom: 25px;
+    }
+  }
+  &_description {
+    @media (max-width: $maxMobileWidth) {
+      font-style: normal;
+      font-weight: 300;
+      font-size: $entriesFontSizeMobile;
+      line-height: 21px;
+      color: $textDarkColor;
+      margin-bottom: 15px;
+    }
+  }
+  &_active {
+    height: 300px;
+    width: 100%;
+    padding: 20px $extraThinVerticalMarginDesktop
+    $smallVerticalMarginDesktop;
+    opacity: 0;
+    color: $textWhiteColor;
+    background-color: $lightGreyColor;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $maxMobileWidth) {
+      padding: $smallVerticalMarginMobile $extraThinVerticalMarginMobile;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: $enlargedVerticalMarginDesktop;
+      color: $lightGreenColor;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $secondaryFontSizeDesktop;
+      font-weight: 400;
+      color: $primaryGreyColor;
+      padding-bottom: 30px;
+    }
+
+    &__cardName {
+      font-size: 24px;
+      line-height: 20px;
+      color: black;
+      font-weight: 300;
+      overflow-wrap: break-word;
+      word-break: break-word;
+
+      &__wrap {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+
+        &__wrap {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__cardSubName {
+      font-size: $entriesFontSizeDesktop;
+      color: black;
+      font-weight: 400;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      &__wrap {
+        margin-bottom: 25px;
+
+        @media (max-width: 576px) {
+          margin-top: $largeVerticalMarginMobile;
+        }
+      }
+    }
+
+    &__edition {
+      font-size: 15px;
+      font-weight: 400;
+      color: $primaryGreyColor;
+      &__wrap {
+        min-height: 19px;
+
+        //@media (max-width: $maxMobileWidth) {
+        //  margin: $smallVerticalMarginDesktop 0;
+        //}
+      }
+    }
+  }
+  &_bottomRow {
+    position: absolute;
+    bottom: 0;
+    max-height: 76px;
+    height: 76px;
+    width: 100%;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    &__author:hover {
+      cursor: pointer;
+      filter: opacity(0.7);
+    }
+  }
+  &_infoRow {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    &__leftBlock {
+      width: 60%;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    &__rightBlock {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      .like {
+        padding: 0 0 1px 0;
+      }
+    }
+  }
+  &_tokenStatus {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    .status {
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 16px;
+      color: $textHintColor;
+    }
+    .price {
+      font-size: 18px;
+      line-height: 21px;
+      color: $normalTextColor;
+    }
+  }
+  &_tokenStatusButton {
+    font-size: 16px !important;
+  }
+  &_previewIcon {
+    position: absolute;
+    right: $smallVerticalMarginDesktop;
+    bottom: $smallVerticalMarginDesktop;
+    margin-top: auto;
+  }
+}

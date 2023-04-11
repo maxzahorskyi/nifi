@@ -1,0 +1,82 @@
+@import '../../../../../styles/palette.scss';
+
+.categoryContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__avatar {
+    margin-right: 35px;
+    @media (max-width: $maxMobileWidth) {
+      margin-right: 0;
+    }
+  }
+  &__formWrap {
+    width: 100%;
+    padding-top: 50px;
+
+    @media (max-width: $maxMobileWidth) {
+      padding-top: 0;
+    }
+  }
+
+  &__fileInputWrap {
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $maxMobileWidth) {
+      margin-top: 40px
+    }
+  }
+}
+.tokensLink {
+  width: max-content;
+  margin-left: auto;
+  margin-top: -97px;
+  margin-bottom: 67px; // 97px;
+  @media (max-width: $maxMobileWidth) {
+    margin-top: -15px; // -30px;
+    margin-bottom: 30px;
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+
+  @media (max-width: $maxMobileWidth) {
+    align-items: center;
+  }
+}
+
+.hint {
+  color: $textHintColor
+}
+.icon {
+  margin-right: 8px;
+}
+.buttonWrap {
+  width: 100%;
+  margin-top: 50px;
+
+  @media (max-width: $maxMobileWidth) {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+}
+
+.inputWrap {
+  padding: 0;
+  margin-bottom: 0 !important;
+  width: 100%;
+}
+
+.fileInputWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+}

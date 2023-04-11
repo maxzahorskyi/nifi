@@ -1,0 +1,40 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.container {
+  scroll-behavior: smooth;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.item{
+  width: 404px;
+  min-width: 404px;
+  height: 200px;
+}
+
+.arrowWrapper {
+  position: absolute;
+  top: -71px;
+  right: -1px;
+  display: flex;
+  grid-column-gap: 10px;
+  z-index: 99;
+}
+
+.arrowRight {
+  fill: white;
+}
